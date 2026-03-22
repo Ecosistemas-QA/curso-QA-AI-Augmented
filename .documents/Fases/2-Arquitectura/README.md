@@ -18,7 +18,7 @@ Es la "biblia" del producto. Describe:
 
 ## 🛠️ Herramientas Utilizadas
 *   **Prompts de IA:** `prd-generator.md`, `architecture-design.md`.
-*   **Mermaid.js:** Para generar diagramas de arquitectura automáticamente.
+*   **Sintaxis Mermaid:** Código que la IA generará dentro de los documentos Markdown para visualizar diagramas automáticamente en GitHub y VS Code.
 
 ## 📝 Entregables Esperados
 Al finalizar esta fase, tendrás en tu carpeta `.context/architecture/`:
