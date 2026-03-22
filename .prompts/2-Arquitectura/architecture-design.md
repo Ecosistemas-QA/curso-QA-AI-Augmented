@@ -2,13 +2,8 @@
 
 Este prompt toma los requisitos del PRD y define CÓMO se construirá el sistema. Genera diagramas técnicos y decisiones de stack.
 
-**Requisito previo:** Se debe haber completado `prd-generator.md`.
+**Requisito previo:** Se debe haber completado `prd.md`. Si no es asi, detener la ejecucion de este prompt y sugerir al usuario la ejecucion de `.prompts\2-Arquitectura\prd-generator.md`.
 
----
-
-## Instrucciones para el QA/Usuario
-
-Copia y pega el siguiente prompt en tu chat con la IA.
 
 **Inputs necesarios:**
 1.  Contenido de `.context/architecture/prd.md`
@@ -27,7 +22,7 @@ Analiza los requisitos y el escenario:
 
 ### **Escenario A: Proyecto Nuevo (Greenfield)**
 
-1.  Propón un **Stack Tecnológico Moderno** (Frontend, Backend, Base de Datos, Infraestructura) justificando cada elección en base a los requisitos del PRD (ej: "Usaremos Next.js por su SEO" o "Supabase por su rapidez en el MVP").
+1.  Propón un **Stack Tecnológico Moderno** (Frontend, Backend, Base de Datos, Infraestructura) justificando cada elección en base a los requisitos del PRD (ej: "Usaremos Next.js por su SEO" o "Supabase por su rapidez en el desarrollo").
 2.  Diseña la **Estructura de la Base de Datos** preliminar (Tablas clave y relaciones).
 3.  Crea un **Diagrama de Contexto (C4 Nivel 1)** usando sintaxis **Mermaid**.
 
@@ -72,14 +67,22 @@ graph TD
 *   **Entidad 2:** [Atributos clave]
 *   **Relaciones:** [1:N, N:N, etc.]
 
-## 4. Decisiones de Arquitectura (ADRs)
+## 4. Diseño de Interfaces (APIs)
+*   **Estilo:** [REST / GraphQL / gRPC]
+*   **Endpoints Principales:**
+    *   `[Verbo] [Ruta]` - [Descripción breve]
+*   **Seguridad:** [JWT / OAuth2 / API Key]
+
+## 5. Decisiones de Arquitectura (ADRs)
 *   **Decisión 1:** [Ej: Monolito vs Microservicios]
     *   *Contexto:* ...
     *   *Decisión:* ...
     *   *Consecuencias:* ...
 
-## 5. Estrategia de Testing (Shift-Left)
+## 6. Estrategia de Testing (Shift-Left)
 *   [Qué tipos de pruebas se automatizarán y en qué niveles (Unit, Integration, E2E)]
 ```
+
+Al finalizar sugerir continuar con `.prompts\3-Infraestructura\environment-analysis.md`
 
 ### **FIN DEL PROMPT**
