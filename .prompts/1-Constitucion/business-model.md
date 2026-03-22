@@ -4,12 +4,6 @@ Este prompt está diseñado para ayudarte a definir la estructura fundamental de
 
 ---
 
-## Instrucciones para el QA/Usuario
-
-Copia y pega el siguiente prompt en tu chat con la IA. Asegúrate de proporcionar la información solicitada según tu escenario.
-
----
-
 ### **INICIO DEL PROMPT**
 
 **ROL: Senior Product Manager & Business Strategist**
@@ -34,7 +28,7 @@ Con esta información, genera un archivo Markdown con la estructura de un Busine
 ### **Escenario B: Proyecto Existente (Legacy/Brownfield)**
 
 Si te indico que es un proyecto existente, guíame para extraer la información necesaria:
-1.  Pregunta si tengo documentación existente (sitio web, whitepaper, presentaciones).
+1.  Pregunta si tengo documentación existente (sitio web, whitepaper, presentaciones, confluence (puedes usar **MCP de Atlassian**)).
 2.  **Si es una aplicación web:** Sugiere que utilice el **MCP de Playwright** (si está disponible y configurado) para navegar la "Home" o "Landing Page" y extraer la propuesta de valor automáticamente.
     *   *Nota para la IA:* Si el usuario confirma el uso de Playwright, instrúyele para que ejecute la herramienta de navegación en la URL provista y analice el contenido para llenar el canvas.
 3.  Si no hay documentación ni acceso web, pídeme una descripción detallada de las funcionalidades actuales para realizar ingeniería inversa del modelo de negocio.
@@ -43,7 +37,7 @@ Si te indico que es un proyecto existente, guíame para extraer la información 
 
 ### **Formato de Salida Requerido**
 
-Independientemente del escenario, tu salida final debe ser un bloque de código Markdown que yo pueda guardar directamente en: `.context/idea/business-model.md`.
+Independientemente del escenario, tu salida final debe ser un bloque de código Markdown que se guarde  directamente en: `.context/idea/business-model.md` (crearlo si no existe).
 
 El contenido debe seguir esta estructura:
 
@@ -80,5 +74,13 @@ El contenido debe seguir esta estructura:
 ## Problem Statement (Resumen)
 *   [Redacción clara del problema principal que resuelve el proyecto]
 ```
+
+**Restricciones:**
+
+- Mantener ligero (2-3 páginas máximo)
+- Datos específicos y cuantificables donde sea posible
+
+
+Al finalizar sugerir continuar con `.prompts\1-Constitucion\market-context.md`
 
 ### **FIN DEL PROMPT**

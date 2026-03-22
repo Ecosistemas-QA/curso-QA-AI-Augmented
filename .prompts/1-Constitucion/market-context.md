@@ -2,13 +2,7 @@
 
 Este prompt te ayudará a analizar el entorno competitivo y las oportunidades de mercado para tu proyecto.
 
-**Requisito previo:** Se recomienda haber completado primero el `business-model.md`.
-
----
-
-## Instrucciones para el QA/Usuario
-
-Copia y pega el siguiente prompt en tu chat con la IA.
+**Requisito previo:** Se debe haber completado primero el `business-model.md`. Si no es asi, detener la ejecucion de este prompt y sugerir al usuario la ejecucion de `.prompts\1-Constitucion\business-model.md` .
 
 ---
 
@@ -16,9 +10,21 @@ Copia y pega el siguiente prompt en tu chat con la IA.
 
 **ROL: Lead Market Analyst & Competitive Intelligence Specialist**
 
-Actúa como un analista de mercado senior especializado en inteligencia competitiva digital. Tu objetivo es crear un documento de **Contexto de Mercado** que identifique oportunidades claras y amenazas reales para mi modelo de negocio.
+Actúa como un analista de mercado Senior especializado en inteligencia competitiva digital.
 
-Para comenzar, necesito que me pidas el contenido de mi archivo actual `.context/idea/business-model.md` (o la idea central del proyecto si aún no lo tengo).
+**Paso 0: Verificación de Necesidad**
+
+Este análisis sirve para entender el entorno competitivo y detectar riesgos externos.
+*   **Ventajas:** Ayuda a definir pruebas de usabilidad más realistas (comparando con estándares del mercado) e identificar "features faltantes" críticas.
+*   **Requisitos:** Necesitas conocer al menos 2-3 competidores o tener acceso a internet para que yo los investigue.
+
+Antes de iniciar, pregúntame: **"¿Deseas realizar el Análisis de Contexto de Mercado o prefieres saltar directamente a la Fase 2 (Arquitectura)?"**
+*   Si respondo que quiero saltarlo: Confirma y dame la instrucción para pasar a `.prompts/2-Arquitectura/prd-generator.md`.
+*   Si respondo que sí: Procede con el siguiente objetivo.
+
+Tu objetivo es crear un documento de **Contexto de Mercado** que identifique oportunidades claras y amenazas reales para mi modelo de negocio.
+
+Para comenzar, necesito que leas el contenido del archivo actual `.context/idea/business-model.md` .
 
 Una vez que tengas esa información, analiza el escenario:
 
@@ -31,8 +37,9 @@ Una vez que tengas esa información, analiza el escenario:
 ### **Escenario B: Proyecto Existente (Legacy/Brownfield)**
 
 1.  Pregunta si conozco a mis competidores actuales.
-2.  **Si es una aplicación web:** Sugiere que utilice herramientas de búsqueda o el **MCP de Playwright** para visitar las páginas de precios o "About Us" de los competidores clave (si tengo las URLs) para analizar cómo se posicionan frente a nosotros.
-3.  Ayúdame a identificar si mi producto actual está desactualizado frente a las tendencias del mercado.
+2.  Solicita acceso a documentos internos que refieran al tema, si existen.
+3.  **Si es una aplicación web:** Sugiere que utilice herramientas de búsqueda o el **MCP de Playwright** para visitar las páginas de precios o "About Us" de los competidores clave (si tengo las URLs) para analizar cómo se posicionan frente a nosotros.
+4.  Ayúdame a identificar si mi producto actual está desactualizado frente a las tendencias del mercado.
 
 ---
 
@@ -61,5 +68,7 @@ El contenido debe seguir esta estructura:
 ## 4. Riesgos y Supuestos
 *   [Riesgos de mercado, regulatorios o de adopción]
 ```
+
+Al finalizar sugerir continuar con `.prompts\2-Arquitectura\architecture-design.md`
 
 ### **FIN DEL PROMPT**
