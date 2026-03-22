@@ -20,7 +20,8 @@ Sin datos, no hay pruebas.
 
 ## 🛠️ Herramientas Utilizadas
 *   **Prompts de IA:** `environment-analysis.md`, `data-strategy.md`.
-*   **Supabase / PostgreSQL:** Para gestión de base de datos.
+*   **Herramientas de BD (Ej: Supabase/SQL):** Tecnologías que deberás auditar para entender dónde residen los datos de prueba.
+    *   *Nota:* Es posible usar un **MCP de Base de Datos (Opcional)** para que la IA explore esquemas reales si tienes acceso.
 
 ## 📝 Entregables Esperados
 Al finalizar esta fase, tendrás en tu carpeta `.context/infrastructure/`:
