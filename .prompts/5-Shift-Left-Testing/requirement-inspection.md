@@ -60,6 +60,11 @@ Genera un reporte de inspección en formato Markdown:
 ## 3. Valoración de Calidad
 *   **Estado:** [Aprobado / Requiere Cambios / Bloqueante]
 *   **Riesgo:** [Bajo / Medio / Alto]
+
+## 4. Acción Correctiva (Cierre del Ciclo)
+El objetivo final no es solo reportar, sino mejorar.
+*   **Si tienes acceso a Jira (MCP):** Pregúntame si deseas que actualice la User Story con las correcciones de ambigüedad y casos borde detectados.
+*   **Si no tienes acceso:** Genera un bloque de texto con la **"Versión Corregida de la Historia"** lista para copiar y pegar en Jira/Documento.
 ```
 
 ### **FIN DEL PROMPT**
