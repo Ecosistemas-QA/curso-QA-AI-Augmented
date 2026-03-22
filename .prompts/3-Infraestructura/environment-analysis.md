@@ -4,15 +4,6 @@ Este prompt está diseñado para que el QA Augmented "mapee el terreno" donde ej
 
 ---
 
-## Instrucciones para el QA/Usuario
-
-Copia y pega el siguiente prompt en tu chat con la IA.
-
-**Inputs necesarios:**
-1.  Contenido de `.context/architecture/system-design.md` (si existe, para contexto técnico).
-
----
-
 ### **INICIO DEL PROMPT**
 
 **ROL: DevOps & Infrastructure Lead**
@@ -57,12 +48,16 @@ El contenido debe seguir esta estructura:
     *   [Navegadores/SO soportados]
     *   [Resoluciones clave]
 
-## 2. Mapa de Entornos (Environments)
-| Entorno | URL / Acceso | Propósito | Datos | ¿Quién despliega? |
-| :--- | :--- | :--- | :--- | :--- |
-| **Local** | localhost:3000 | Desarrollo y pruebas unitarias | Mocks/Seed | Desarrollador |
-| **Staging/QA** | [URL] | Pruebas funcionales y de integración | Copia anonimizada de Prod | CI/CD (Automático) |
-| **Producción** | [URL] | Usuario final | Reales | Aprobación Manual |
+## 2. Mapa de Entornos (Matriz de URLs)
+| Componente | Entorno Local | Entorno Staging/QA | Entorno Producción |
+| :--- | :--- | :--- | :--- |
+| **Frontend** | `http://localhost:3000` | `[URL]` | `[URL]` |
+| **Backend API** | `http://localhost:8080` | `[API Base URL]` | `[API Base URL]` |
+| **Base de Datos** | `localhost:5432` | `[Host/Connection]` | `[Restringido]` |
+
+### Detalles de Acceso
+*   **Credenciales de Prueba:** [Referencia a Vault/.env]
+*   **VPN/Restricciones:** [Si aplica]
 
 ## 3. Pipeline de CI/CD (Integración Continua)
 *   **Trigger:** [Cuándo se ejecutan las pruebas: al hacer Push, al crear PR, etc.]
@@ -71,5 +66,7 @@ El contenido debe seguir esta estructura:
 ## 4. Herramientas de Infraestructura
 *   [Ej: Docker, Kubernetes, Vercel, AWS]
 ```
+
+Al finalizar sugerir continuar con `.prompts\3-Infraestructura\data-strategy.md`
 
 ### **FIN DEL PROMPT**

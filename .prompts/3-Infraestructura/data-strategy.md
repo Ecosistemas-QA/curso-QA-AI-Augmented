@@ -2,13 +2,7 @@
 
 Este prompt ayuda al QA a definir CÓMO y CON QUÉ datos se realizarán las pruebas. Sin datos, no hay pruebas confiables.
 
-**Requisito previo:** Se recomienda haber ejecutado `environment-analysis.md`.
-
----
-
-## Instrucciones para el QA/Usuario
-
-Copia y pega el siguiente prompt en tu chat con la IA.
+**Requisito previo:** Se recomienda haber ejecutado `environment-analysis.md`. Si no es asi, sugerir al usuario revisarlo primero.
 
 ---
 
@@ -65,5 +59,7 @@ El contenido debe seguir esta estructura:
 ## 5. Limpieza y Reset (Teardown)
 *   [Estrategia para volver el sistema al estado inicial después de las pruebas]
 ```
+
+Al finalizar sugerir continuar con `.prompts\4-Especificaciones (Backlog)\pbi-product-backlog.md`
 
 ### **FIN DEL PROMPT**
