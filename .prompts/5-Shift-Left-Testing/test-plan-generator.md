@@ -2,17 +2,7 @@
 
 Este prompt te ayuda a identificar riesgos técnicos y de negocio asociados a una funcionalidad (Epic) y a definir la estrategia de pruebas adecuada para mitigarlos.
 
-**Requisito previo:** Tener una Epic definida en `.context/PBI/` con sus Stories asociadas.
-
----
-
-## Instrucciones para el QA/Usuario
-
-Copia y pega el siguiente prompt en tu chat con la IA.
-
-**Input necesario:**
-1.  Nombre y descripción de la Epic que vas a analizar.
-2.  Lista de User Stories asociadas (títulos).
+**Requisito previo:** Tener una Epic definida.
 
 ---
 
@@ -70,5 +60,7 @@ El contenido debe seguir esta estructura:
 ## 4. Necesidades de Entorno y Datos
 *   [Datos requeridos en Staging]
 ```
+
+Una vez aprobado el plan y desplegado el entorno, sugerir iniciar la ejecución con `.prompts\6-Testing Exploratorio\smoke-test.md`
 
 ### **FIN DEL PROMPT**
