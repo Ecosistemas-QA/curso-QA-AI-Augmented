@@ -15,18 +15,29 @@ Este servidor MCP conecta tu Asistente de IA directamente con tu instancia de Ji
     *   Ve a [id.atlassian.com/manage-profile/security/api-tokens](https://id.atlassian.com/manage-profile/security/api-tokens).
     *   Crea un token llamado "MCP-Key" y **cópialo**.
 
-## ⚙️ Configuración
+## ⚙️ Configuración y Autenticación
 
-Agrega esta entrada a tu archivo de configuración MCP (`claude_config.json` o similar).
+Existen dos formas de conectar Jira, dependiendo de la herramienta que uses.
 
-### Variables de Entorno Requeridas
-El servidor necesita estas variables. Puedes ponerlas en tu `.env` o pasarlas en la configuración del cliente.
+### Opción A: Autenticación vía Navegador (OAuth)
+*Recomendado para: Claude Desktop App, Context7 (Modo Interactivo).*
 
-*   `JIRA_BASE_URL`: Tu URL (ej: `https://mi-empresa.atlassian.net`)
-*   `JIRA_EMAIL`: Tu correo de login (ej: `yo@empresa.com`)
-*   `JIRA_API_TOKEN`: El token que creaste.
+1.  Al añadir la herramienta, tu aplicación podría abrir automáticamente una ventana del navegador.
+2.  Inicia sesión en Atlassian.
+3.  Haz clic en **"Accept"** o **"Authorize"**.
+4.  ¡Listo! El token se gestiona internamente y no necesitas configurar nada más.
 
-### Ejemplo de Configuración JSON
+### Opción B: Autenticación Manual (API Token)
+*Recomendado para: CLIs, Servidores, Scripts o si la Opción A falla.*
+
+Si tu herramienta te pide variables de entorno manuales, sigue estos pasos:
+
+1.  **Variables de Entorno Requeridas:**
+    *   `JIRA_BASE_URL`: Tu URL (ej: `https://mi-empresa.atlassian.net`)
+    *   `JIRA_EMAIL`: Tu correo de login (ej: `yo@empresa.com`)
+    *   `JIRA_API_TOKEN`: El token que creaste en los requisitos previos.
+
+2.  **Ejemplo de Configuración JSON:**
 
 ```json
 "atlassian": {
