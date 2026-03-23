@@ -6,16 +6,6 @@ Este prompt ejecuta una prueba rápida de "Sanidad" para verificar que el despli
 
 ---
 
-## Instrucciones para el QA/Usuario
-
-Copia y pega el siguiente prompt en tu chat con la IA.
-
-**Input necesario:**
-1.  URL de la aplicación a probar.
-2.  Credenciales de prueba (si requiere login).
-
----
-
 ### **INICIO DEL PROMPT**
 
 **ROL: QA Automation Engineer**
@@ -57,5 +47,10 @@ Genera un reporte breve en Markdown:
 *   [Screenshot o Log de Playwright]
 *   [Notas de errores encontrados]
 ```
+
+Si el Smoke Test pasa (PASSED), sugerir elegir la siguiente misión exploratoria:
+*   Para UI: `.prompts\6-Testing Exploratorio\exploratory-ui-test.md`
+*   Para API: `.prompts\6-Testing Exploratorio\exploratory-api-test.md`
+*   Para DB: `.prompts\6-Testing Exploratorio\exploratory-db-test.md`
 
 ### **FIN DEL PROMPT**

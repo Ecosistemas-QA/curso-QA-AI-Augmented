@@ -6,15 +6,7 @@ Este prompt valida la integridad de los datos. Verifica que lo que dijo la API q
 
 ---
 
-## Instrucciones para el QA/Usuario
 
-Copia y pega el siguiente prompt en tu chat con la IA.
-
-**Input necesario:**
-1.  Esquema de la tabla relevante (si se tiene).
-2.  Operación realizada previamente (ej: "Acabo de crear el usuario X").
-
----
 
 ### **INICIO DEL PROMPT**
 

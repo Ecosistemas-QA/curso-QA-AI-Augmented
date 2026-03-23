@@ -6,15 +6,7 @@ Este prompt guía una sesión profunda de pruebas exploratorias en la Interfaz d
 
 ---
 
-## Instrucciones para el QA/Usuario
 
-Copia y pega el siguiente prompt en tu chat con la IA.
-
-**Input necesario:**
-1.  La User Story o Feature que se va a probar.
-2.  URL de la funcionalidad específica.
-
----
 
 ### **INICIO DEL PROMPT**
 

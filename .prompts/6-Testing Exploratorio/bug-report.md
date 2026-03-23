@@ -6,16 +6,7 @@ Este prompt toma tus notas desordenadas de una sesión exploratoria y las convie
 
 ---
 
-## Instrucciones para el QA/Usuario
 
-Copia y pega el siguiente prompt en tu chat con la IA.
-
-**Input necesario:**
-1.  Descripción del problema ("Hice esto y pasó esto").
-2.  Pasos aproximados.
-3.  Datos usados.
-
----
 
 ### **INICIO DEL PROMPT**
 
