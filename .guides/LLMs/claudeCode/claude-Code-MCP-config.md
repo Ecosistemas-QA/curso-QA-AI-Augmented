@@ -7,55 +7,37 @@ El **Model Context Protocol (MCP)** es un estándar abierto que permite a los as
 - **Claude Code CLI** instalado y autenticado.
 - **Node.js** v18+ instalado.
 
-## Instalación de Servidores MCP Comunes
+## Guías de Configuración Específicas
 
-En este curso utilizaremos principalmente los MCPs de sistema de archivos, PostgreSQL (Supabase) y herramientas de QA.
+Para este curso, hemos preparado guías detalladas para configurar las herramientas clave. Sigue los pasos en estos documentos y luego regresa aquí para integrarlos en tu `claude_config.json`.
 
-### 1. Instalar Servidores
+*   **Bases de Datos:** [PostgreSQL / Supabase](../../mcps/Databases/postgres-mcp-setup.md)
+*   **Testing UI:** [Playwright (Navegador)](../../mcps/Testing/playwright-mcp-setup.md)
+*   **Gestión:** [Jira / Confluence](../../mcps/Atlassian/atlassian-mcp-setup.md)
+*   **APIs:** [Postman / OpenAPI](../../mcps/Testing/openapi-postman-setup.md)
 
-Instalaremos los servidores MCP necesarios globalmente o en tu proyecto:
+## Ejemplo de `claude_config.json` Completo
 
-```bash
-# Servidor de Sistema de Archivos (para que Claude lea/escriba mejor)
-npm install -g @modelcontextprotocol/server-filesystem
-
-# Servidor de PostgreSQL (para bases de datos)
-npm install -g @modelcontextprotocol/server-postgres
-```
-
-### 2. Configurar `claude_config.json`
-
-Claude Code busca un archivo de configuración para saber qué servidores MCP iniciar.
-
-1. Ubica o crea el archivo de configuración:
-   - **Windows:** `%APPDATA%\Claude\claude_config.json`
-   - **Mac/Linux:** `~/.config/claude/claude_config.json`
-
-2. Edita el archivo con la siguiente estructura:
+Una vez instalados los servidores, tu archivo de configuración debería verse así:
 
 ```json
 {
   "mcpServers": {
     "filesystem": {
       "command": "npx",
-      "args": [
-        "-y",
-        "@modelcontextprotocol/server-filesystem",
-        "C:\\Users\\admin\\Mi unidad\\Ecosistemas\\EcoInnova" 
-      ]
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "C:\\Ruta\\Al\\Proyecto"]
     },
     "postgres": {
       "command": "npx",
-      "args": [
-        "-y",
-        "@modelcontextprotocol/server-postgres",
-        "postgresql://user:password@localhost:5432/mydb"
-      ]
+      "args": ["-y", "@modelcontextprotocol/server-postgres", "postgresql://..."]
+    },
+    "playwright": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-playwright"]
     }
   }
 }
 ```
-*(Ajusta las rutas y cadenas de conexión a tu entorno real)*.
 
 ## Verificación
 

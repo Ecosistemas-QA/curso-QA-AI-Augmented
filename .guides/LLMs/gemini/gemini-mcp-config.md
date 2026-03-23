@@ -70,22 +70,15 @@ $env:MCP_CONFIG_FILE = "C:\Ruta\a\tu\mcp-config.json"
 gemini "Analiza la base de datos y lista los usuarios"
 ```
 
-## Servidores MCP Recomendados para el Curso
+## Servidores MCP del Curso
 
-### 1. Playwright MCP (Testing UI)
-Esencial para la **Fase 6: Testing Exploratorio**. Permite a Gemini "ver" y "clicar" en sitios web.
-- **Instalación:** `npm install -g @modelcontextprotocol/server-playwright`
-- **Uso:** "Entra a la URL de staging y verifica si el login funciona".
+Para configurar las herramientas específicas (Testing, BD, Jira), consulta las **Guías Centralizadas** donde encontrarás los comandos de instalación y variables de entorno necesarias:
 
-### 2. Supabase/Postgres MCP (Testing DB)
-Esencial para verificar la integridad de datos.
-- **Instalación:** `npm install -g @modelcontextprotocol/server-postgres`
-- **Config:** Requiere la variable `POSTGRES_CONNECTION_STRING` en tu `.env` o en el JSON de configuración.
+*   **[Guía de PostgreSQL / Supabase](../../mcps/Databases/postgres-mcp-setup.md)**
+*   **[Guía de Playwright (UI Testing)](../../mcps/Testing/playwright-mcp-setup.md)**
+*   **[Guía de Atlassian (Jira)](../../mcps/Atlassian/atlassian-mcp-setup.md)**
 
-### 3. Atlassian/Jira MCP (Gestión)
-Permite crear Tickets y Bugs directamente desde la terminal.
-- **Instalación:** `npm install -g @modelcontextprotocol/server-atlassian`
-- **Auth:** Requiere `JIRA_API_TOKEN` y `JIRA_EMAIL`.
+Una vez que tengas los comandos `npx ...` de esas guías, agrégalos a tu `mcp-config.json` como se muestra arriba.
 
 ## Verificación
 

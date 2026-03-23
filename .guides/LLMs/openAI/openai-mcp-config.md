@@ -57,20 +57,16 @@ Si prefieres usar un IDE:
 3. Configura la API Key de OpenAI en la extensión.
 4. Ahora puedes chatear con GPT-4 en el sidebar y él tendrá acceso a tus herramientas.
 
-## Servidores MCP Esenciales para OpenAI
+## Servidores MCP Esenciales para el Curso
 
-### 1. Sistema de Archivos
-Permite a GPT-4 leer tu código y escribir tests directamente.
-- **Package:** `@modelcontextprotocol/server-filesystem`
+Consulta las guías específicas para obtener los comandos de instalación y configuración detallados:
 
-### 2. Postman/OpenAPI (API Testing)
-Permite a GPT-4 explorar tus APIs documentadas.
-- **Package:** `@modelcontextprotocol/server-openapi`
-- **Uso:** "Consulta el endpoint /users y valida el schema".
+*   **[Sistema de Archivos](../../mcps/Databases/sqlite-mcp-setup.md)** (o SQLite para local)
+*   **[PostgreSQL / Supabase](../../mcps/Databases/postgres-mcp-setup.md)**
+*   **[Playwright (UI)](../../mcps/Testing/playwright-mcp-setup.md)**
+*   **[Postman / OpenAPI](../../mcps/Testing/openapi-postman-setup.md)**
 
-### 3. PostgreSQL (Data Validation)
-Permite a GPT-4 hacer queries de validación.
-- **Package:** `@modelcontextprotocol/server-postgres`
+Copia los bloques JSON de esas guías y pégalos en tu archivo `~/.context7rc` o en la configuración de tu IDE.
 
 ## Verificación
 

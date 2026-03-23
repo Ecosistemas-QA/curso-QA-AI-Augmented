@@ -31,7 +31,6 @@ VS Code se puede mejorar con "accesorios". Para este curso, te recomendamos inst
 
 La "pantalla negra" (terminal) asusta a muchos, pero es necesaria para hablar con las herramientas de IA. **Warp** es una terminal moderna que funciona como un chat: puedes usar el mouse, copiar y pegar fácilmente, y tiene IA integrada.
 
-*Nota: Si estás en Windows y Warp no está disponible, usaremos PowerShell, que ya viene instalado.*
 
 ### 📥 Instalación
 1.  Ve a [warp.dev](https://www.warp.dev/).
