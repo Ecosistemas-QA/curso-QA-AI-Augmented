@@ -1,7 +1,7 @@
 # Fase 6: Testing Exploratorio (La Trifuerza)
 
 ## 🎯 Objetivo de la Fase
-Ejecutar pruebas dinámicas manuales o asistidas para validar la funcionalidad y encontrar defectos no obvios. Es la fase de "romper el sistema".
+Ejecutar pruebas dinámicas manuales o asistidas para validar la funcionalidad y encontrar defectos no obvios. Es la fase de "romper el sistema". Se continua con la valoracion o calificacion de cada CP propuesto en las US para la etapa de documentacion.
 
 ## 🔑 Conceptos Clave
 
@@ -21,9 +21,10 @@ Un buen reporte de bug debe ser:
 *   **Evidenciado:** Screenshots, logs, datos.
 
 ## 🛠️ Herramientas Utilizadas
-*   **Prompts de IA:** `smoke-test.md`, `exploratory-ui-test.md`, `bug-report.md`.
+*   **Prompts de IA:** `smoke-test.md`, `exploratory-ui-test.md`, `exploratory-api-test.md`, `exploratory-db-test.md`, `bug-report.md`.
 *   **Playwright MCP:** Para navegación asistida.
 *   **Postman / cURL:** Para pruebas de API.
+*   **BD MCP:** Para pruebas de Bases de Datos
 
 ## 📝 Entregables Esperados
 Al finalizar esta fase, tendrás en tu carpeta `.context/testing/exploratory/`:

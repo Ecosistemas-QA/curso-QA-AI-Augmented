@@ -22,8 +22,9 @@ La capacidad de seguir el rastro:
 Esto asegura que si cambian los requisitos, sabemos qué pruebas actualizar.
 
 ## 🛠️ Herramientas Utilizadas
-*   **Prompts de IA:** `test-analysis.md`, `test-prioritization.md`, `test-documentation.md`.
+*   **Prompts de IA:** `test-analysis.md`, `test-prioritization.md`, `test-documentation.md`, `x-rayApiPrompts.md`.
 *   **Jira / Xray:** Repositorio de casos de prueba.
+    *   *Nota:* Si utilizas **Xray** y dado que aun no disponemos de un MCP oficial, utiliza el script `x-rayApiPrompts.md` ubicado en la carpeta de prompts para interactuar con su API.
 
 ## 📝 Entregables Esperados
 Al finalizar esta fase, tendrás en tu carpeta `.context/testing/documentation/`:

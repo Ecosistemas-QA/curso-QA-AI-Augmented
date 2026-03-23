@@ -25,7 +25,8 @@ La fuente de la verdad es Jira. La carpeta local `.context/PBI/` es un espejo pa
 
 ## 🛠️ Herramientas Utilizadas
 *   **Prompts de IA:** `pbi-product-backlog.md`, `refine-stories.md`.
-*   **Jira / Atlassian MCP:** Para gestión de tickets.
+*   **Jira / Atlassian MCP:** Para gestión de tickets nativos.
+
 
 ## 📝 Entregables Esperados
 Al finalizar esta fase, tendrás en tu carpeta `.context/PBI/`:
