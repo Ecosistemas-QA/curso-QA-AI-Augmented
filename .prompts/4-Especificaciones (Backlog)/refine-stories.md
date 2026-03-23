@@ -2,17 +2,7 @@
 
 Este prompt es el núcleo del **QA Augmentation**. Toma una User Story "cruda" del backlog y la refina utilizando IA para asegurar que sea clara, testeable y completa.
 
-**Requisito previo:** Tener una User Story creada (en Jira o localmente) que necesite refinamiento.
-
----
-
-## Instrucciones para el QA/Usuario
-
-Copia y pega el siguiente prompt en tu chat con la IA.
-
-**Input necesario:**
-1.  Contenido del archivo `story.md` que quieres refinar (o la descripción de la historia).
-2.  Reglas de negocio o contexto adicional (opcional).
+**Requisito previo:** Tener una User Story creada (en Jira o localmente). Si no hay historias, sugerir ir a `pbi-product-backlog.md`.
 
 ---
 
@@ -71,5 +61,7 @@ Genera el contenido actualizado para el archivo `story.md` local siguiendo este 
 ## Notas de QA
 *   [Dudas resueltas o datos de prueba necesarios]
 ```
+
+Al finalizar sugerir continuar con la inspección de calidad en `.prompts\5-Shift-Left-Testing\requirement-inspection.md`
 
 ### **FIN DEL PROMPT**

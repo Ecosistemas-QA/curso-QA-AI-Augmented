@@ -3,15 +3,9 @@
 Este prompt transforma el PRD en un Backlog estructurado en Jira y crea un "espejo" local en tu sistema de archivos.
 
 **Requisito previo:**
-1.  Tener completado `.context/architecture/prd.md`.
+1.  Tener completado `.context/architecture/prd.md`. Si no existe, sugerir ejecutar `.prompts\2-Arquitectura\prd-generator.md`.
 2.  Tener un proyecto en Jira y conocer su **Project Key** (ej: `PROJ`).
 3.  Tener el **MCP de Atlassian** configurado (opcional, pero recomendado para automatización).
-
----
-
-## Instrucciones para el QA/Usuario
-
-Copia y pega el siguiente prompt en tu chat con la IA.
 
 ---
 
@@ -94,5 +88,7 @@ Como [rol], quiero [acción], para [beneficio].
 - [ ] El sistema debe...
 - [ ] El usuario puede...
 ```
+
+Al finalizar, sugerir seleccionar una historia crítica y continuar con `.prompts\4-Especificaciones (Backlog)\refine-stories.md`
 
 ### **FIN DEL PROMPT**

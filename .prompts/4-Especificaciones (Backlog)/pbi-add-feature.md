@@ -6,12 +6,6 @@ Este prompt te ayuda a añadir una nueva funcionalidad al proyecto DESPUÉS de h
 
 ---
 
-## Instrucciones para el QA/Usuario
-
-Copia y pega el siguiente prompt en tu chat con la IA.
-
----
-
 ### **INICIO DEL PROMPT**
 
 **ROL: Agile Product Owner**
