@@ -6,15 +6,6 @@ Este prompt te ayuda a decidir inteligentemente: ¿Qué automatizamos y qué dej
 
 ---
 
-## Instrucciones para el QA/Usuario
-
-Copia y pega el siguiente prompt en tu chat con la IA.
-
-**Input necesario:**
-1.  Lista de escenarios a evaluar.
-
----
-
 ### **INICIO DEL PROMPT**
 
 **ROL: Test Manager**
@@ -48,5 +39,7 @@ Para cada escenario, evalúa:
 | Flujo de Compra | 2.8 | ✅ AUTOMATE | Crítico y frecuente. |
 | Validación UX Color | 1.2 | ✋ MANUAL | Visual, difícil de automatizar. |
 ```
+
+Al finalizar, sugerir documentar los casos seleccionados con `.prompts\7-Documentacion CPs\test-documentation.md`
 
 ### **FIN DEL PROMPT**

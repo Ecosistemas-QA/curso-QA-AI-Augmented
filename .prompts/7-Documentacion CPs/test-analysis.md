@@ -2,17 +2,7 @@
 
 Este prompt transforma las notas "caóticas" del Testing Exploratorio en una lista estructurada de Escenarios de Prueba candidatos para la regresión.
 
-**Requisito previo:** User Story en estado "QA Approved" (Exploratorio pasado).
-
----
-
-## Instrucciones para el QA/Usuario
-
-Copia y pega el siguiente prompt en tu chat con la IA.
-
-**Input necesario:**
-1.  Título de la User Story.
-2.  Notas de la sesión exploratoria (o resumen de lo probado).
+**Requisito previo:** Haber realizado pruebas exploratorias sobre la historia. Si no, ir a Fase 6.
 
 ---
 
@@ -49,5 +39,7 @@ Genera una lista de candidatos:
 ## Observaciones
 *   El caso de "Email con espacios" es trivial, se cubre en unitarios.
 ```
+
+Al finalizar, sugerir priorizar estos casos con `.prompts\7-Documentacion CPs\test-prioritization.md`
 
 ### **FIN DEL PROMPT**
