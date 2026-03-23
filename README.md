@@ -35,11 +35,31 @@ Este proyecto está diseñado para ser tu **"Laboratorio de QA"**.
 
 ## 🚀 Cómo empezar
 
-### 1. Clona este repositorio
-Descarga tu propia copia para trabajar localmente:
+Este repositorio es una **Plantilla (Template)**. No debes trabajar directamente sobre él, sino crear tu propia copia.
+
+### Opción A: Usar como Plantilla (Recomendado)
+1.  Haz clic en el botón verde **"Use this template"** (arriba a la derecha en GitHub) -> **"Create a new repository"**.
+2.  Dale un nombre a tu proyecto (ej: `mi-proyecto-qa-ia`).
+3.  Clona **TU** nuevo repositorio en tu máquina:
+    ```bash
+    git clone https://github.com/TU-USUARIO/mi-proyecto-qa-ia.git
+    cd mi-proyecto-qa-ia
+    ```
+
+### Opción B: Clonado Manual
+Si prefieres clonarlo manualmente, recuerda cambiar el origen para no intentar subir cambios a este repositorio base:
+
 ```bash
+# 1. Clona este repo
 git clone https://github.com/Ecosistemas-QA/curso-QA-AI-Augmented.git
 cd curso-QA-AI-Augmented
+
+# 2. Elimina el vínculo con el origen
+git remote remove origin
+
+# 3. Crea tu propio repo vacío en GitHub y conéctalo
+git remote add origin https://github.com/TU-USUARIO/tu-repo-nuevo.git
+git push -u origin main
 ```
 
 ### 2. Elige tu Motor de IA
