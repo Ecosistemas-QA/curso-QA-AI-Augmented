@@ -16,3 +16,7 @@ Este archivo es para uso interno de los creadores del curso.
 ## 📝 Mejoras Futuras de Documentación
 *   [ ] Agregar ejemplos de outputs reales en las carpetas `.context/` para que el alumno tenga una referencia visual.
 *   [ ] Crear video-tutoriales cortos para la instalación de herramientas (linkear en `.guides/guia-inicio-setup.md`).
+
+## 🔄 Estado del Repositorio
+*   **Sincronización Dual:** Activa (Ecosistemas-QA + Personal).
+*   **Última Verificación:** Marzo 2026.
