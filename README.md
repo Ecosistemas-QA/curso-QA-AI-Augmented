@@ -64,9 +64,17 @@ git push -u origin main
 
 ### 2. Elige tu Motor de IA
 Ve a la carpeta `.guides/LLMs/` y sigue la guía de instalación para tu asistente favorito:
-*   [Google Gemini](.guides/LLMs/gemini/instalacion-gemini-cli.md) (Recomendado para versión gratuita).
-*   [Anthropic Claude](.guides/LLMs/claudeCode/claude-Code-CLI-config.md) (Recomendado para codificación).
-*   [OpenAI GPT-4](.guides/LLMs/openAI/openai-cli-config.md) (Estándar de industria).
+**Las tres del curso** — elegí una:
+
+*   [Anthropic — Claude Code](.guides/LLMs/claudeCode/claude-Code-CLI-config.md)
+*   [OpenAI — Codex](.guides/LLMs/openAI/openai-cli-config.md)
+*   [Google — Antigravity CLI (`agy`)](.guides/LLMs/antigravity/instalacion-antigravity-cli.md) (reemplaza a Gemini CLI, retirada en junio de 2026)
+
+**Alternativa para entornos corporativos** — solo si tu empresa bloquea las tres de
+arriba, algo habitual en bancos y aseguradoras:
+
+*   [GitHub Copilot CLI](.guides/LLMs/copilot/copilot-cli-config.md) (terminal)
+*   [GitHub Copilot en VS Code — modo agente](.guides/LLMs/copilot/copilot-vscode-agente.md) (sin instalar nada, si ya tenés VS Code y Copilot)
 
 ### 3. Ejecuta tu primer Prompt
 Abre el archivo `.prompts/1-Constitucion/business-model.md`, copia el contenido y pégalo en tu chat con la IA. ¡Mira cómo genera tu estrategia de negocio!

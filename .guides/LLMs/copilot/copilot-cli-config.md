@@ -1,120 +1,218 @@
 # Guía de Instalación de GitHub Copilot CLI
 
 ## Descripción
-**GitHub Copilot CLI** es una extensión oficial para la herramienta de línea de comandos de GitHub (`gh`). Lleva la potencia de Copilot directamente a tu terminal, permitiéndote generar comandos de shell, explicaciones y scripts usando lenguaje natural.
+
+**GitHub Copilot CLI** trae el asistente de IA a tu terminal. No es un buscador de
+comandos: es **agéntico**, o sea que puede leer los archivos de tu proyecto, escribirlos
+y ejecutar tareas, conversando en lenguaje natural.
+
+El comando se llama **`copilot`**.
+
+---
+
+## ⚠️ Leé esto antes de elegir esta herramienta
+
+**El curso se dicta sobre Claude Code, Codex y Antigravity CLI.** Esas tres son las que
+vamos a usar en clase y las que están en los ejercicios.
+
+**Copilot es la alternativa para cuando ninguna de las tres se puede instalar.** Y ese
+caso es real: en bancos, aseguradoras y empresas grandes, Copilot suele ser la única
+herramienta de IA ya aprobada, porque llega dentro del contrato corporativo de Microsoft
+que el área legal ya revisó.
+
+| Si… | Usá |
+|---|---|
+| Podés instalar lo que quieras | **Claude Code, Codex o Antigravity CLI** — son las del curso |
+| Tu empresa bloquea todo salvo la suite de Microsoft | **Copilot** (esta guía) |
+
+**No te quedás afuera de nada.** Los conceptos son los mismos y Copilot resuelve bien lo
+que hacemos. Lo que cambia son algunos nombres de comandos, y las diferencias están
+señaladas donde corresponde.
+
+---
+
+---
+
+## ⚠️ Si conocías `gh copilot suggest` y `gh copilot explain`
+
+Existía antes una **extensión** de GitHub CLI que solo sugería y explicaba comandos:
+
+```bash
+gh extension install github/gh-copilot   # ← deprecada
+```
+
+**Esa extensión está deprecada.** La reemplazó esta herramienta, que es otra cosa: la
+anterior te *sugería* un comando para que lo corrieras vos; la nueva **trabaja sobre tu
+proyecto**.
+
+| | Extensión `gh-copilot` *(deprecada)* | Copilot CLI |
+|---|---|---|
+| **Qué hacía** | Sugerir y explicar comandos | Leer, escribir y ejecutar sobre tu proyecto |
+| **Cómo se invocaba** | `gh copilot suggest "..."` | `copilot` |
+| **Instalación** | Extensión de `gh` | winget, npm, Homebrew o `gh copilot` |
+
+Si la tenías instalada, no hace falta que la desinstales, pero **usá la nueva**.
+
+---
 
 ## Requisitos Previos
 
-- **GitHub CLI (`gh`)**: Versión 2.0 o superior.
-- **Suscripción activa**: GitHub Copilot Individual o Business.
-- **Cuenta de GitHub**: Autenticada en tu terminal.
+- **Una suscripción activa de GitHub Copilot.** Si tu empresa te la da, ya la tenés:
+  verificalo en https://github.com/settings/copilot.
+- **PowerShell 6 o superior** en Windows.
+- **Una cuenta de GitHub** con acceso a Copilot.
+
+> ⚠️ **En entornos corporativos, revisá esto primero.** Algunas organizaciones
+> restringen qué puede hacer Copilot por política. Si algo no funciona y la suscripción
+> está activa, probablemente sea una política de tu organización y no un problema de
+> instalación.
+
+---
 
 ## Instalación
 
-### Paso 1: Instalar GitHub CLI (`gh`)
+Hay varias vías. **Elegí según lo que tu empresa te permita**, en este orden:
 
-Si aún no tienes el CLI base de GitHub:
+### Opción A — WinGet (Windows) · la recomendada
 
-**Windows (winget):**
 ```powershell
-winget install --id GitHub.cli
+winget install GitHub.Copilot
 ```
 
-**Mac (Homebrew):**
-```bash
-brew install gh
+**Es la mejor opción en equipos corporativos:** no necesita Node.js, y WinGet suele estar
+permitido porque es el gestor de paquetes de la propia Microsoft.
+
+### Opción B — Desde GitHub CLI
+
+Si ya tenés `gh` instalado y autenticado:
+
+```powershell
+gh copilot
 ```
 
-**Linux:**
-Consulta las instrucciones oficiales según tu distribución.
+Se encarga de instalar y arrancar la herramienta.
 
-### Paso 2: Autenticación
+### Opción C — npm (todas las plataformas)
 
-Inicia sesión con tu cuenta de GitHub que tiene acceso a Copilot:
-
-```bash
-gh auth login
-```
-*Sigue los pasos en pantalla (selecciona HTTPS o SSH según prefieras).*
-
-### Paso 3: Instalar la Extensión Copilot
-
-Una vez autenticado, instala la extensión oficial:
-
-```bash
-gh extension install github/gh-copilot
+```powershell
+npm install -g @github/copilot
 ```
 
-### Paso 4: Actualizar (Opcional pero recomendado)
+> ⚠️ **Requiere Node.js 22 o superior.** Verificá con `node --version`. En muchas
+> empresas la instalación de paquetes npm globales está bloqueada — si es tu caso, usá
+> la Opción A.
 
-Si ya lo tenías instalado, asegúrate de tener la última versión:
+### Opción D — macOS y Linux
 
-```bash
-gh extension upgrade gh-copilot
+Con **Homebrew** o el script de instalación oficial. 🔄 Consultá el comando vigente en
+la [documentación oficial](https://docs.github.com/en/copilot/how-tos/copilot-cli/install-copilot-cli).
+
+---
+
+## Primer uso
+
+### Paso 1: Cerrar y volver a abrir la terminal
+
+Necesario para que la consola reconozca el comando nuevo. Si lo salteás, el paso
+siguiente falla aunque la instalación haya salido bien.
+
+### Paso 2: Pararte en tu proyecto y arrancar
+
+```powershell
+cd C:\ruta\a\tu\proyecto
+copilot
 ```
+
+Arranca **dentro de esa carpeta**, y eso es lo que le da acceso a esos archivos. Es la
+diferencia con usar Copilot en una pestaña del navegador.
+
+### Paso 3: Autenticarte
+
+Dentro de la sesión, escribí:
+
+```
+/login
+```
+
+Y seguí las instrucciones en pantalla.
+
+### Paso 4: Verificar que ve tu proyecto
+
+```
+Leé @README.md y decime en dos líneas de qué se trata este proyecto
+```
+
+Si responde sobre el contenido real del archivo, está funcionando.
+
+---
 
 ## Uso Básico
 
-Copilot CLI tiene dos modos principales: `suggest` (sugerir comandos) y `explain` (explicar comandos).
+### Referenciar archivos con `@`
 
-### 1. Sugerir Comandos (`gh copilot suggest`)
+Escribí `@` y el nombre del archivo. Va autocompletando:
 
-Pídele que genere un comando complejo por ti:
-
-```bash
-gh copilot suggest "Lista todos los archivos PDF mayores a 10MB en la carpeta actual"
+```
+Leé @requisitos.md y decime qué situaciones no están contempladas
 ```
 
-Copilot te ofrecerá:
-- El comando sugerido.
-- Una explicación de qué hace.
-- La opción de copiarlo al portapapeles o ejecutarlo directamente.
+**Esto reemplaza copiar y pegar.** El archivo no se pega: se lee.
 
-### 2. Explicar Comandos (`gh copilot explain`)
+> 💡 **En teclado en español, `@` sale con `AltGr + Q`.** Si estás dentro de Warp y AltGr
+> te enciende el dictado por voz, usá **`Ctrl + Alt + Q`**.
 
-¿No entiendes qué hace un comando críptico que encontraste en internet? Pregúntale a Copilot:
+### Ver los comandos disponibles
 
-```bash
-gh copilot explain "tar -xzvf archivo.tar.gz -C /tmp"
+Escribí `/` y se despliega el menú. **No hace falta memorizar nada.**
+
+### Salir
+
+```
+/exit
 ```
 
-## Configuración de Alias (Power User)
-
-Escribir `gh copilot suggest` cada vez es tedioso. Configura alias cortos (`??` para sugerir, `wt` para explicar).
-
-**En PowerShell / Bash / Zsh:**
-
-Ejecuta este comando para ver las instrucciones de configuración automática para tu shell:
-
-```bash
-gh copilot alias -- console
-```
-
-Copia y pega el bloque de código que te proporcione en tu archivo de perfil (`.bashrc`, `.zshrc`, `$PROFILE`).
-
-**Ejemplo de uso con alias:**
-
-```bash
-# Sugerir
-?? "Elimina todas las ramas de git excepto main"
-
-# Explicar
-wt "git reset --hard HEAD~1"
-```
+---
 
 ## Solución de Problemas
 
-**Error: "You are not subscribed to GitHub Copilot"**
-- Verifica que tu cuenta tenga una suscripción activa en [GitHub Settings](https://github.com/settings/copilot).
-- Asegúrate de haber hecho login con la cuenta correcta: `gh auth status`.
+### ❌ `copilot` no se reconoce como comando
 
-**Error: "Extension not found"**
-- Verifica tu conexión a internet.
-- Actualiza `gh` a la última versión.
+**Causa más probable:** no cerraste y volviste a abrir la terminal después de instalar.
+
+**Solución:** cerrá PowerShell, abrí una ventana nueva y probá otra vez.
+
+### ❌ "You are not subscribed to GitHub Copilot"
+
+- Verificá la suscripción en https://github.com/settings/copilot.
+- Confirmá que iniciaste sesión con la cuenta correcta: dentro de la sesión, `/login`.
+- Si es una cuenta de empresa, puede que falte que te asignen la licencia. Consultá con
+  quien administre Copilot en tu organización.
+
+### ❌ WinGet no está disponible
+
+Es raro en Windows 10 y 11 actualizados, pero puede pasar en equipos con políticas
+restrictivas. Probá la Opción B (`gh copilot`) o hablá con sistemas.
+
+### ❌ La instalación por npm falla por permisos
+
+Es una restricción de tu equipo. **No la fuerces con permisos de administrador si es una
+máquina de la empresa** — usá WinGet.
+
+---
 
 ## Uso en el Curso
 
-Utilizaremos Copilot CLI para:
-1. **Recordar sintaxis de Git:** "Cómo deshacer el último commit sin borrar cambios".
-2. **Generar comandos de testing:** "Ejecuta solo los tests que contengan 'login' con pytest".
-3. **Manejo de archivos:** "Busca recursivamente archivos .log y bórralos".
+1. **Analizar requisitos.** *"Leé `@historia.md` y decime qué casos borde no están
+   contemplados."*
+2. **Generar casos de prueba** a partir de un ticket, con el formato de tu equipo.
+3. **Entender comandos** que encontraste en algún lado y no sabés qué hacen.
+4. **Documentar**, con la ventaja de que lee los archivos reales del proyecto.
+
+> 🔗 **Para usarlo dentro de VS Code**, que es lo más habitual en empresas con la suite
+> de Microsoft, seguí [`copilot-vscode-agente.md`](copilot-vscode-agente.md).
+
+---
+
+> 🔄 **Última revisión: agosto de 2026.** Copilot CLI está cambiando rápido — la
+> extensión anterior se deprecó en menos de un año. Ante una diferencia con lo que ves en
+> pantalla, la documentación oficial manda.
