@@ -23,7 +23,11 @@ Definir **qué** tipos de pruebas (Unitarias, Integración, E2E) y **con qué** 
 *   **Prompts de IA:** `requirement-inspection.md`, `test-plan-generator.md`.
 
 ## 📝 Entregables Esperados
-Al finalizar esta fase, tendrás en tu carpeta `.context/testing/`:
-1.  Reportes de **Inspección de Requisitos**.
-2.  **Planes de Prueba** y **Matrices de Riesgo** por Epic.
-3.  **User Stories Corregidas:** Las mejoras detectadas deben aplicarse directamente en la fuente (Jira o Documentos Locales), cerrando el ciclo de calidad.
+Al finalizar esta fase tendrás:
+
+| Archivo | Lo escribe |
+| :--- | :--- |
+| `.context/testing/inspections/inspeccion-[ID-US].md` | `requirement-inspection.md` |
+| `.context/testing/test-plan-[nombre-epic].md` | `test-plan-generator.md` |
+
+Y además **User Stories corregidas**: las mejoras detectadas se aplican directamente en la fuente (Jira o el `story.md` local), cerrando el ciclo de calidad. Si Jira no está disponible, la corrección queda igual en el reporte, marcada como pendiente de subir.

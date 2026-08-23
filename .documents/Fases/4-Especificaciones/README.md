@@ -23,6 +23,8 @@ Lenguaje estructurado para definir criterios de aceptación:
 ### 3. Jira-First Workflow
 La fuente de la verdad es Jira. La carpeta local `.context/PBI/` es un espejo para que la IA pueda analizar el backlog.
 
+**Pero Jira no bloquea la fase.** Si todavía no hay proyecto en Jira, o el MCP no responde, los prompts escriben igual el backlog local con IDs temporales (`PBI-01`) y marcan cada archivo con `Estado de sincronización: PENDIENTE DE SUBIR A JIRA`. El índice `epic-tree.md` lleva la lista de lo que queda por subir. Se trabaja igual, y no se pierde el rastro de lo que falta sincronizar.
+
 ## 🛠️ Herramientas Utilizadas
 *   **Prompts de IA:** `pbi-product-backlog.md`, `refine-stories.md`.
 *   **Jira / Atlassian MCP:** Para gestión de tickets nativos.

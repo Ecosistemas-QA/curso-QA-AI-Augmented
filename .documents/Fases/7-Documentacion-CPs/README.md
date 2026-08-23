@@ -22,12 +22,17 @@ La capacidad de seguir el rastro:
 Esto asegura que si cambian los requisitos, sabemos qué pruebas actualizar.
 
 ## 🛠️ Herramientas Utilizadas
-*   **Prompts de IA:** `test-analysis.md`, `test-prioritization.md`, `test-documentation.md`, `x-rayApiPrompts.md`.
+*   **Prompts de IA:** `test-analysis.md`, `test-prioritization.md`, `test-documentation.md`, `xray-api.md`.
 *   **Jira / Xray:** Repositorio de casos de prueba.
-    *   *Nota:* Si utilizas **Xray** y dado que aun no disponemos de un MCP oficial, utiliza el script `x-rayApiPrompts.md` ubicado en la carpeta de prompts para interactuar con su API.
+    *   *Nota:* Si utilizas **Xray** y dado que aun no disponemos de un MCP oficial, utiliza el script `xray-api.md` ubicado en la carpeta de prompts para interactuar con su API.
 
 ## 📝 Entregables Esperados
-Al finalizar esta fase, tendrás en tu carpeta `.context/testing/documentation/`:
-1.  Análisis de **Candidatos de Prueba**.
-2.  Matriz de **Priorización y ROI**.
-3.  **Casos de Prueba Formales** (Manuales y Gherkin) listos para importar.
+Al finalizar esta fase tendrás, en `.context/testing/documentation/[ID-US]/`:
+
+| Archivo | Lo escribe |
+| :--- | :--- |
+| `analisis-escenarios.md` | `test-analysis.md` |
+| `priorizacion-roi.md` | `test-prioritization.md` |
+| `[ID-CP]-[nombre-kebab].md` (uno por caso) | `test-documentation.md` |
+
+Los casos quedan **vinculados a su historia de usuario**: un caso de prueba sin historia vinculada no está terminado.

@@ -19,8 +19,9 @@ Este repositorio es la base de un curso diseñado para transformar a **QA Manual
 ├── .documents/             # Base de conocimiento teórica (READMEs humanos)
 ├── .gitignore              # Qué queda fuera del repositorio
 ├── .gitattributes          # Normalización de finales de línea
-├── README.md               # Portada y guía de inicio
-└── TODO.md                 # Roadmap interno y definiciones pendientes
+├── AGENTS.md               # Directivas de trabajo (fuente única)
+├── CLAUDE.md               # Puntero a AGENTS.md
+└── README.md               # Portada y guía de inicio
 ```
 
 ### Qué es `.context/`
@@ -94,4 +95,5 @@ Todos los prompts en `.prompts/` siguen estos principios de optimización:
     vacío a propósito: se va poblando a medida que avanzan las fases.
 *   **Asistentes documentados:** Claude Code, Antigravity, Codex/OpenAI, Copilot y Gemini
     en `.guides/LLMs/`.
-*   **Definiciones Pendientes (`TODO.md`):** Estrategia de Base de Datos "Enterprise" universal para MCP.
+*   **Encadenamiento:** las siete fases corren enlazadas de punta a punta. Cada prompt
+    escribe su entregable en `.context/` y nombra el siguiente.

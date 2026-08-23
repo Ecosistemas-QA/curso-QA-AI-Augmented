@@ -26,7 +26,19 @@ Un buen reporte de bug debe ser:
 *   **Postman / cURL:** Para pruebas de API.
 *   **BD MCP:** Para pruebas de Bases de Datos
 
+### 4. Lo que no se ejecutó no está probado
+La regla que sostiene todos los reportes de esta fase: un caso sin evidencia se marca **No ejecutado**, nunca *PASS*. Un caso diseñado no es un caso corrido, y una sesión que no distingue las dos cosas es peor que no tener sesión.
+
 ## 📝 Entregables Esperados
-Al finalizar esta fase, tendrás en tu carpeta `.context/testing/exploratory/`:
-1.  Logs de sesiones exploratorias.
-2.  **Reportes de Bugs** listos para Jira.
+Al finalizar esta fase tendrás, en `.context/testing/exploratory/`:
+
+| Archivo | Lo escribe |
+| :--- | :--- |
+| `smoke/smoke-[fecha]-[entorno].md` | `smoke-test.md` |
+| `ui/session-[fecha]-[feature].md` + capturas | `exploratory-ui-test.md` |
+| `handoffs/ui-to-api-db-[fecha]-[feature].md` | `exploratory-ui-test.md` |
+| `api/session-[fecha]-[endpoint].md` + colección Postman | `exploratory-api-test.md` |
+| `db/session-[fecha]-[feature].md` | `exploratory-db-test.md` |
+| `bugs/bug-[fecha]-[slug].md` | `bug-report.md` |
+
+> ⚠️ El archivo `*.postman_environment.json` **no se versiona**: `.gitignore` lo excluye porque es el que lleva los tokens. Las colecciones sí se versionan.
