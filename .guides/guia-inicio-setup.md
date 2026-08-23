@@ -66,6 +66,18 @@ git --version
 ```
 Si te sale un número, ¡ya lo tienes!
 
+### 📖 Y después de instalarlo
+
+Tener Git instalado no es lo mismo que saber trabajar con él. Hay tres guías en `.guides/Git/`, pensadas para leerse en este orden:
+
+| Guía | Para qué |
+| :--- | :--- |
+| [`git-basico.md`](./Git/git-basico.md) | Los comandos del día a día: clonar, guardar cambios, subir y bajar. Empieza por aquí. |
+| [`git-workflow.md`](./Git/git-workflow.md) | El ciclo de una tarea de principio a fin, y cómo escribir buenos mensajes. |
+| [`git-colaboracion.md`](./Git/git-colaboracion.md) | Cuando trabajas con otras personas: ramas, Pull Requests, revisión entre pares y por qué `main` está protegida. |
+
+Si vas a trabajar solo, con las dos primeras alcanza. **La tercera se vuelve indispensable en cuanto haya alguien más tocando los mismos documentos**, que es el caso normal en un equipo.
+
 ---
 
 ## ✅ Verificación Final

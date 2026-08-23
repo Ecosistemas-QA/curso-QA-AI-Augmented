@@ -72,8 +72,26 @@ Este proyecto está diseñado para ser tu **"Laboratorio de QA"**.
 | :--- | :--- |
 | **`.prompts/`** | 🧠 **El Cerebro:** Librería de prompts de ingeniería listos para usar en cada fase (F1 a F7). |
 | **`.context/`** | 🗂️ **La Memoria:** Aquí se guardan los outputs de la IA (PRDs, Planes de Prueba, Bugs). Viene vacía para que tú la llenes. |
-| **`.guides/`** | 📚 **El Manual:** Guías técnicas para instalar CLIs, configurar Git y conectar LLMs (Gemini, Claude, OpenAI). |
+| **`.guides/`** | 📚 **El Manual:** Guías técnicas para instalar CLIs, trabajar con Git y conectar LLMs (ver abajo). |
 | **`.documents/`** | 📖 **La Teoría:** Explicación conceptual de cada fase del ciclo de vida del QA Augmented. |
+
+---
+
+## 📚 Las Guías
+
+| Guía | Para qué |
+| :--- | :--- |
+| [Inicio y setup](.guides/guia-inicio-setup.md) | Instalar todo desde cero: VS Code, terminal, Node.js y Git. **Empieza por aquí.** |
+| [Git — básico](.guides/Git/git-basico.md) | Los comandos del día a día: clonar, guardar cambios, subir y bajar. |
+| [Git — flujo de trabajo](.guides/Git/git-workflow.md) | El ciclo de una tarea de principio a fin y cómo escribir buenos mensajes. |
+| [Git — trabajo en equipo](.guides/Git/git-colaboracion.md) | Ramas, Pull Requests, revisión entre pares y por qué `main` está protegida. |
+| [`.guides/LLMs/`](.guides/LLMs/) | Instalar y configurar el asistente de IA que elijas. |
+| [`.guides/mcps/`](.guides/mcps/) | Conectar herramientas por MCP: Jira, bases de datos, navegador, Postman. |
+| [`.guides/postman/`](.guides/postman/) | Preparar Postman para las pruebas de API. |
+
+> La guía de **trabajo en equipo** es la que más se saltea y la que más cuesta después. Aquí
+> el repositorio no guarda código: guarda documentos, y un documento equivocado se ve igual
+> que uno correcto. La revisión de otra persona es el único control que existe.
 
 ---
 
