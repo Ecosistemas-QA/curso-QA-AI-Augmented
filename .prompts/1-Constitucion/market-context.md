@@ -2,7 +2,7 @@
 
 Este prompt te ayudará a analizar el entorno competitivo y las oportunidades de mercado para tu proyecto.
 
-**Requisito previo:** Se debe haber completado primero el `business-model.md`. Si no es asi, detener la ejecucion de este prompt y sugerir al usuario la ejecucion de `.prompts\1-Constitucion\business-model.md` .
+**Requisito previo:** Se debe haber completado primero el `business-model.md`. Si no es así, detén la ejecución de este prompt y sugiere al usuario la ejecución de `.prompts/1-Constitucion/business-model.md`.
 
 ---
 
@@ -19,14 +19,14 @@ Este análisis sirve para entender el entorno competitivo y detectar riesgos ext
 *   **Requisitos:** Necesitas conocer al menos 2-3 competidores o tener acceso a internet para que yo los investigue.
 
 Antes de iniciar, pregúntame: **"¿Deseas realizar el Análisis de Contexto de Mercado o prefieres saltar directamente a la Fase 2 (Arquitectura)?"**
-*   Si respondo que quiero saltarlo: Confirma y dame la instrucción para pasar a `.prompts/2-Arquitectura/prd-generator.md`.
-*   Si respondo que sí: Procede con el siguiente objetivo.
+*   Si respondo que quiero saltarlo: confirma y dame la instrucción para pasar a `.prompts/2-Arquitectura/prd-generator.md`.
+*   Si respondo que sí: procede con el siguiente objetivo.
 
 Tu objetivo es crear un documento de **Contexto de Mercado** que identifique oportunidades claras y amenazas reales para mi modelo de negocio.
 
-Para comenzar, necesito que leas el contenido del archivo actual `.context/idea/business-model.md` .
+Para comenzar, lee el archivo `.context/idea/business-model.md`.
 
-Una vez que tengas esa información, analiza el escenario:
+**No me preguntes si el proyecto es nuevo o existente:** ese dato ya está en el encabezado de ese archivo, en el campo `Tipo de proyecto`. Léelo de ahí y sigue el escenario que corresponda.
 
 ### **Escenario A: Proyecto Nuevo (Greenfield)**
 
@@ -36,16 +36,24 @@ Una vez que tengas esa información, analiza el escenario:
 
 ### **Escenario B: Proyecto Existente (Legacy/Brownfield)**
 
-1.  Pregunta si conozco a mis competidores actuales.
-2.  Solicita acceso a documentos internos que refieran al tema, si existen.
-3.  **Si es una aplicación web:** Sugiere que utilice herramientas de búsqueda o el **MCP de Playwright** para visitar las páginas de precios o "About Us" de los competidores clave (si tengo las URLs) para analizar cómo se posicionan frente a nosotros.
+1.  Pregúntame si conozco a mis competidores actuales.
+2.  **Pídeme la documentación que hable del tema**, si existe: *"¿Hay documentos que mencionen competidores o posicionamiento? Pasame la ruta de la carpeta o de los archivos."*
+    *   **Si te doy una carpeta, lee todos los archivos que haya adentro, no solo el primero.**
+    *   Antes de producir nada, enumérame qué archivos leíste.
+    *   Asume que el material **puede contener contradicciones y datos vencidos**. No promedies valores distintos ni elijas en silencio: registra las discrepancias en la sección correspondiente.
+3.  **Herramienta opcional.** Si el **MCP de Playwright** está configurado y tengo las URLs, ofrece visitar las páginas de precios o "About Us" de los competidores clave para analizar cómo se posicionan frente a nosotros.
+    *   **Si no está configurado, no te detengas ni me pidas que lo instale.** Sigue con lo que tengas y anota la limitación en "Preguntas abiertas".
 4.  Ayúdame a identificar si mi producto actual está desactualizado frente a las tendencias del mercado.
 
 ---
 
 ### **Formato de Salida Requerido**
 
-Tu salida final debe ser un bloque de código Markdown listo para guardar en: `.context/idea/market-context.md`.
+**Escribe el archivo en `.context/idea/market-context.md`.** Si la carpeta no existe, créala. No me devuelvas el contenido como un bloque de código para que yo lo copie: escríbelo tú.
+
+Al terminar, confírmame:
+*   La ruta exacta del archivo que escribiste.
+*   Qué secciones quedaron incompletas y por qué.
 
 El contenido debe seguir esta estructura:
 
@@ -67,8 +75,26 @@ El contenido debe seguir esta estructura:
 
 ## 4. Riesgos y Supuestos
 *   [Riesgos de mercado, regulatorios o de adopción]
+
+## Fuentes
+| Dato / afirmación | De dónde sale |
+| :--- | :--- |
+| [Dato] | `archivo.md` · [sección] |
+| [Dato] | **Hipótesis** — no hay documento que lo respalde |
+
+## Contradicciones detectadas
+*   [Qué documentos se contradicen, qué dice cada uno, cuál tomaste y por qué]
+
+## Preguntas abiertas
+*   [Lo que ningún documento contesta. No lo completes con hipótesis: déjalo como pregunta]
 ```
 
-Al finalizar sugerir continuar con `.prompts\2-Arquitectura\architecture-design.md`
+**Restricciones:**
+
+- Mantener ligero: 2 páginas máximo.
+- **Todo dato que no salga de un documento se marca como hipótesis** en la tabla de Fuentes. Un competidor que conoces de memoria, una cifra de mercado que recuerdas o una tendencia que das por sabida son hipótesis, no evidencia.
+- Las tres últimas secciones nunca se omiten. Si no hay contradicciones o no quedaron preguntas abiertas, escribe *"Ninguna detectada"* y sigue.
+
+Al finalizar sugerir continuar con `.prompts/2-Arquitectura/prd-generator.md`
 
 ### **FIN DEL PROMPT**
