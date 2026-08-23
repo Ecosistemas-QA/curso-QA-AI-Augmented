@@ -8,6 +8,9 @@
 #                       generado por una fase o bajado de Jira). Se commitea
 #                       entera: tenerla sincronizada es el motivo por el que
 #                       usamos Git en este curso.
+#  · .env.example        Dice QUÉ credenciales hacen falta, nunca sus
+#                        valores. Es lo único que salva al que clona de
+#                        adivinar. El `.env` de verdad queda afuera.
 #  · *.template.json     Plantillas de configuración SIN credenciales.
 #    *.template.toml     Son material del curso.
 #  · *.postman_collection.json   Las colecciones se comparten.
@@ -22,6 +25,7 @@
 # ── Credenciales ─────────────────────────────────────────────
 .env
 .env.*
+!.env.example
 *credencial*
 *credential*
 *.pem

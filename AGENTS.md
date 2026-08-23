@@ -63,3 +63,27 @@ Never work directly on `main`. Use branches such as `docs/US-1122-login`, `promp
 ## Security & Configuration
 
 Never commit tokens, credentials, `.env` files, private keys, local MCP configs, or Postman environments. Keep only sanitized templates, and review material imported into `.context/` before committing it.
+
+### Where credentials live
+
+Two mechanisms, and a secret belongs to exactly one of them:
+
+- **A credential consumed by an MCP server** (Jira, Postgres, Playwright, Postman) belongs to that server's configuration in the user's home directory. It never reaches this repository, and the agent never handles the value — it just calls the tool.
+- **A credential the agent uses to call an API directly** (`curl`, `fetch`) belongs in `.env` at the repository root. Today that is Xray, which has no official MCP, plus the API and test-user credentials of phase 6.
+
+`.env.example` is committed and lists **which** variables are needed, never their values; `.env` itself is ignored. When a prompt needs a credential that is not in `.env.example`, add the variable there — do not invent a second place to keep secrets.
+
+### Never read a secret into context
+
+Do not open `.env` to read a value, and never ask the user to paste one into the conversation. Either puts the secret in the session transcript, which is exactly what these files exist to prevent.
+
+Load it in the shell and reference the variable instead, so the value is resolved by the shell and never enters the conversation:
+
+```bash
+set -a; . ./.env; set +a
+curl -H "Authorization: Bearer $XRAY_TOKEN" ...
+```
+
+For the same reason, never run `echo $VARIABLE` or `curl -v` on an authenticated request: both print the secret into tool output, which *is* in context.
+
+If a required variable is missing, say which variable is missing by name and stop. Never guess a value, and never work around the gap by asking for the secret directly.
