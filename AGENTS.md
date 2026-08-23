@@ -35,6 +35,29 @@ How to use them when analysing:
 - **Current evidence outranks them.** Observed behaviour in the running product, a recent ticket, or a newer document wins over a page here. In that case the page is *stale*, not wrong — it was true when it was written.
 - **Discrepancies are findings, not errors to clean up.** When two documents disagree, or a question has no answer anywhere, record it in the phase deliverable, name the documents involved, and state which one you relied on and why.
 
+## Skills
+
+Skills live in `.claude/skills/<name>/SKILL.md` — **exactly one directory level below
+`.claude/skills/`, at the repository root.** That path is not a preference; it is the only
+place the runtime looks. A bare `.claude/skills/SKILL.md`, anything nested deeper, and a
+`skills/` directory anywhere outside `.claude/` are all silently ignored: the file is never
+read and nothing reports an error. Unlike `CLAUDE.md`, which can import `AGENTS.md`, skills
+have no import mechanism, so there is no way to keep the real file elsewhere and point at it.
+
+**The location is tool-specific; the format is not.** `SKILL.md` with `name`, `description`,
+and optional `allowed-tools` frontmatter is a portable specification. So write the body
+tool-agnostic — no vendor names, no assumptions about which assistant is reading it — and a
+skill copied into another tool's directory keeps working.
+
+Two rules for the content:
+
+- **The `description` is the trigger.** It is matched against the user's request to decide
+  whether the skill loads, so it must say *when to use this*, in the words a user would
+  actually type — not just what it does.
+- **Read conventions, do not hardcode them.** A skill that encodes this repository's commit
+  style stops being useful the moment the repository it runs in has a different one. Have it
+  read `AGENTS.md` and the existing history instead.
+
 ## Development and Validation Commands
 
 No build tool or automated test runner is configured. Use repository-level checks instead:
