@@ -8,12 +8,53 @@ Este repositorio es la base de un curso diseñado para transformar a **QA Manual
 ```text
 .
 ├── .prompts/               # Librería de "Cerebros" (Fases F1-F7)
-├── .context/               # Memoria de trabajo (Outputs de la IA)
+├── .context/               # Contexto del proyecto: todo lo que los prompts leen
+│   ├── Confluence-corporativo/  # El Confluence del proyecto, simulado (ver abajo)
+│   ├── idea/               # F1 - Constitución
+│   ├── architecture/       # F2 - Arquitectura
+│   ├── infrastructure/     # F3 - Infraestructura
+│   ├── PBI/                # F4 - Especificaciones
+│   └── testing/            # F5-F7 - Testing
 ├── .guides/                # Manuales técnicos (Git, LLMs, Setup)
 ├── .documents/             # Base de conocimiento teórica (READMEs humanos)
+├── .gitignore              # Qué queda fuera del repositorio
+├── .gitattributes          # Normalización de finales de línea
 ├── README.md               # Portada y guía de inicio
 └── TODO.md                 # Roadmap interno y definiciones pendientes
 ```
+
+### Qué es `.context/`
+
+Es la **base de conocimiento del proyecto**: todo archivo que los prompts puedan
+necesitar para trabajar. Funciona como el RAG del repositorio — la IA lee de acá
+antes de producir cualquier cosa. No es una carpeta de salidas.
+
+De dónde viene cada archivo es secundario, y hay tres caminos, los tres legítimos:
+
+| Origen | Ejemplo |
+| :--- | :--- |
+| **Documentación del proyecto** — la que ya venía escrita | `Confluence-corporativo/` |
+| **Generado** — lo escribe un prompt al ejecutar una fase | El canvas de negocio de F1, las historias de usuario de F4 |
+| **Bajado** — vive en una herramienta externa y se trae acá para que la IA lo lea | Historias o casos de prueba que ya están cargados en Jira y no en el repositorio |
+
+### `Confluence-corporativo/`
+
+Son seis archivos que **simulan las páginas que el equipo habría subido al Confluence
+de la empresa**: documentación de negocio y técnica del proyecto Cita.ai —minuta de
+kickoff, notas de entrevistas, especificación funcional, notas técnicas del
+desarrollador, un hilo de mails de cambio de alcance y un resumen de tickets de
+soporte—. Es el insumo del camino **Brownfield** de las Fases 1 a 3.
+
+> **Por qué está simulado.** El curso trabaja sobre una instancia de **Jira Free**,
+> que no incluye Confluence. Sin un Confluence real al que conectarse, la
+> documentación se vuelca a archivos dentro del repositorio: es la forma de que la
+> IA pueda leerla igual. El nombre de la carpeta es a propósito, para que se lea
+> como lo que representa y no como una carpeta del curso.
+
+> **Nota para la IA:** entre estos documentos hay **contradicciones y huecos
+> puestos a propósito**. Son el ejercicio del curso, no defectos del material: no
+> hay que corregirlos, unificarlos ni señalarlos como erratas al generar los
+> entregables de cada fase.
 
 ## 3. Lógica de las Fases (The Workflow)
 
@@ -45,8 +86,12 @@ Todos los prompts en `.prompts/` siguen estos principios de optimización:
     2.  `https://github.com/jlb984/curso-QA-AI-Augmented.git`
 *   **Autenticación:** Uso de **Personal Access Tokens (PAT)** inyectados en las URLs de los remotos para evitar conflictos de identidad.
 
-## 6. Estado Actual del Proyecto (Marzo 2026)
+## 6. Estado Actual del Proyecto (Agosto 2026)
 
-*   **Completado:** Fases 1, 2 y 3 (Refinadas, sincronizadas y commiteadas).
-*   **Pendiente de Commitear:** Fases 4, 5, 6 y 7 (Ya están escritas y optimizadas en local).
+*   **Prompts:** Las siete fases están escritas, refinadas y commiteadas.
+*   **Material del proyecto de práctica:** Cargada la documentación heredada de **Cita.ai**
+    en `.context/Confluence-corporativo/` (seis archivos). El resto de `.context/` arranca
+    vacío a propósito: se va poblando a medida que avanzan las fases.
+*   **Asistentes documentados:** Claude Code, Antigravity, Codex/OpenAI, Copilot y Gemini
+    en `.guides/LLMs/`.
 *   **Definiciones Pendientes (`TODO.md`):** Estrategia de Base de Datos "Enterprise" universal para MCP.
