@@ -5,6 +5,10 @@ En un equipo de **QA Augmented**, Git no solo guarda código, sino **Conocimient
 
 El objetivo es que **todos tengamos la misma información** actualizada y ordenada.
 
+> Esta guía es el resumen del día a día. Para el detalle de cómo nombrar las ramas, cómo se
+> abre y se revisa un Pull Request en GitHub, GitLab o Azure DevOps, y por qué `main` está
+> protegida, está [`git-colaboracion.md`](./git-colaboracion.md).
+
 ---
 
 ## 🚫 La Regla de Oro
@@ -20,14 +24,23 @@ Una **Rama** es una copia paralela del proyecto donde puedes trabajar tranquilo 
 
 ### Nomenclatura Recomendada para QA
 
-Usa prefijos para que sepamos de qué trata tu trabajo:
+El nombre sigue el patrón `tipo/ID-DEL-TICKET-descripcion-corta`:
 
 | Prefijo | Uso | Ejemplo |
 | :--- | :--- | :--- |
-| **docs/** | Documentación nueva o actualizada | `docs/US-1122-login` |
-| **prompts/** | Creación o mejora de Prompts | `prompts/mejora-analisis` |
-| **test/** | Casos de prueba o scripts | `test/regresion-pagos` |
-| **fix/** | Corrección de errores en docs | `fix/typo-en-readme` |
+| **docs/** | Documentación nueva o actualizada | `docs/QA-1122-login-mfa` |
+| **prompts/** | Creación o mejora de Prompts | `prompts/QA-1188-analisis-riesgos` |
+| **test/** | Casos de prueba o scripts | `test/QA-1150-regresion-pagos` |
+| **fix/** | Corrección de errores en docs | `fix/QA-1163-limite-freemium` |
+| **chore/** | Mantenimiento, orden, configuración | `chore/QA-1201-reordenar-carpetas` |
+
+**El ID del ticket es lo que más trabaja**: es el hilo que conecta el ticket, la rama, los
+commits y el cambio incorporado. Sin él, dentro de seis meses la respuesta a *"¿por qué este
+documento dice esto?"* es *"no sé"*.
+
+El porqué completo, las reglas de escritura y los antiejemplos están en
+[`git-colaboracion.md`](./git-colaboracion.md), sección *«El nombre de la rama es el relato
+del trabajo»*.
 
 ### Comandos para Ramas
 
@@ -69,10 +82,18 @@ git push origin docs/US-505-pago-qr
 ```
 
 ### Paso 4: Pull Request (Revisión de Pares)
-Ve a GitHub y verás un botón **"Compare & pull request"**.
+
+Entra al repositorio **en el navegador** y abre el Pull Request desde tu rama hacia `main`.
+No hace falta instalar nada ni usar ningún comando nuevo: de acá en adelante es todo web.
+
 *   Esto avisa a tu equipo: *"Terminé los docs de la US-505, ¿alguien puede revisarlos?"*.
 *   Un compañero revisa que los prompts sean efectivos y la documentación clara.
-*   Si todo está bien, aprueban y mezclan (**Merge**) tu trabajo en `main`.
+*   Si todo está bien, aprueban e incorporan (**Merge**) tu trabajo en `main`.
+
+Cómo se abre en cada plataforma, qué escribir en la descripción, qué mirar al revisar un
+documento y por qué el que aprueba no puede ser el autor:
+[`git-colaboracion.md`](./git-colaboracion.md), secciones *«El Pull Request»* y
+*«`main` protegida»*.
 
 ---
 
