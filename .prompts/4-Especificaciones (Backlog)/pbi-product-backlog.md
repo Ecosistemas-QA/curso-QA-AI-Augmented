@@ -24,6 +24,29 @@ Primero, lee `.context/architecture/prd.md`. Ese es tu insumo principal: no me p
 
 Después pregúntame la **Project Key** de Jira (ej: `MYAPP`). **Si no la tengo, o el proyecto todavía no existe, sigue igual** con el flujo de trabajo: la sección "Sincronización con Jira" te dice cómo.
 
+### **Qué backlog estás armando**
+
+El `Tipo de proyecto` que acabas de leer cambia el trabajo, no solo el tono.
+
+#### **Escenario A: Proyecto Nuevo (Greenfield)**
+
+El backlog es un **plan de construcción**: describe lo que hay que hacer. Todo sale del PRD y
+nada existe todavía.
+
+#### **Escenario B: Proyecto Existente (Legacy/Brownfield)**
+
+El backlog es una **reconstrucción**, no un plan. El software ya existe y funciona; lo que
+falta es el papel que explica qué hace y por qué. Tres cosas cambian:
+
+1.  **Lee también la documentación heredada**, no solo el PRD. Si el PRD se armó a partir de
+    esos mismos documentos, esta es una segunda pasada, y lo que se perdió al resumir se
+    recupera acá.
+2.  **Una historia escrita no es una funcionalidad construida, y una funcionalidad construida
+    no siempre está escrita.** No supongas ninguna de las dos cosas: no estuviste ahí.
+3.  **Al terminar, dime cuáles son las historias que nadie fue a mirar.** Ese es el trabajo de
+    la skill `documentar-historia`, que abre la aplicación, verifica el comportamiento real y
+    completa lo observado con su evidencia.
+
 ### **Flujo de Trabajo**
 
 #### **Paso 1: Identificación de Epics**
@@ -102,6 +125,7 @@ Al terminar, confírmame:
 | Dato / afirmación | De dónde sale |
 | :--- | :--- |
 | [Alcance de la Epic] | `prd.md` · [sección] |
+| [Regla de negocio] | **Observado** — [entorno], [fecha]. Evidencia: `[ruta]` |
 | [Regla de negocio] | **Hipótesis** — no hay documento que lo respalde |
 ```
 
@@ -111,6 +135,7 @@ Al terminar, confírmame:
 # Story: [Título]
 **ID:** [KEY de Jira o ID temporal]
 **Epic:** [EPIC-KEY]
+**Implementación:** Sin verificar
 **Estado de sincronización:** [Sincronizado con Jira | PENDIENTE DE SUBIR A JIRA]
 
 ## Descripción
@@ -124,8 +149,13 @@ Como [rol], quiero [acción], para [beneficio].
 | Dato / afirmación | De dónde sale |
 | :--- | :--- |
 | [Criterio de aceptación] | `prd.md` · [sección] |
+| [Criterio de aceptación] | **Observado** — [entorno], [fecha]. Evidencia: `[ruta]` |
 | [Criterio de aceptación] | **Hipótesis** — no hay documento que lo respalde |
 ```
+
+> **El campo `Implementación`** admite `Implementada`, `Parcial`, `No encontrada` o
+> `Sin verificar`, y **acá siempre nace `Sin verificar`**: este prompt lee documentos, no abre
+> la aplicación. Cambiarlo sin haber ido a mirar es afirmar algo que nadie comprobó.
 
 **Contenido de `epic-tree.md`:**
 
@@ -135,12 +165,17 @@ Como [rol], quiero [acción], para [beneficio].
 **Origen:** `.context/architecture/prd.md`
 **Fecha:** [fecha]
 
-| Epic | Stories | Estado de sincronización |
-| :--- | :--- | :--- |
-| [KEY] [Título] | [n] | [Sincronizado / PENDIENTE] |
+| Epic | Stories | Sin verificar | Estado de sincronización |
+| :--- | :--- | :--- | :--- |
+| [KEY] [Título] | [n] | [cuántas de esas n] | [Sincronizado / PENDIENTE] |
 
 ## Pendiente de subir a Jira
 *   [Epics y Stories con ID temporal. Si no hay ninguna, escribir "Ninguna: todo sincronizado"]
+
+## Pendiente de verificar contra la aplicación
+*   [Historias cuyo comportamiento real nadie confirmó. En Greenfield son todas y está bien.
+    En Brownfield, cada una de estas es una historia que puede no existir, existir a medias,
+    o existir de otra forma. Se resuelven con la skill `documentar-historia`]
 
 ## Contradicciones detectadas
 *   [Qué documentos se contradicen, qué dice cada uno, cuál tomaste y por qué]
@@ -152,6 +187,8 @@ Como [rol], quiero [acción], para [beneficio].
 **Restricciones:**
 
 - **Todo criterio de aceptación que no salga del PRD se marca como hipótesis** en la tabla de Fuentes.
+- **`Observado` solo lo escribe quien miró.** Es para un dato verificado en la aplicación, y siempre con entorno, fecha y evidencia. Si no fuiste a mirar, no existe esa fila: será `prd.md` o será hipótesis.
+- **Observado no es acordado.** Un dato observado que ningún documento respalda va **además** a *Preguntas abiertas*: que el sistema se comporte así no significa que deba comportarse así, y hasta que negocio lo confirme sigue en duda.
 - **Nunca escribas una credencial en claro** en un archivo del backlog.
 - Las dos últimas secciones de `epic-tree.md` nunca se omiten. Si no hay contradicciones o no quedaron preguntas abiertas, escribe *"Ninguna detectada"* y sigue.
 

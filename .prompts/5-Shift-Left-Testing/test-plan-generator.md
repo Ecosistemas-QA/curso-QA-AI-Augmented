@@ -37,7 +37,7 @@ Clasifícalos por **Probabilidad** (1-5) e **Impacto** (1-5).
 
 ### **2. Estrategia de Pruebas (Test Strategy)**
 Define qué tipos de pruebas son necesarios para mitigar esos riesgos.
-*   **Pruebas Unitarias:** ¿Qué lógica compleja debe probar el desarrollador?
+*   **Pruebas Unitarias:** ¿Qué lógica compleja tiene que quedar cubierta a ese nivel? Si el código ya existe, la pregunta no es qué escribirá el desarrollador sino qué hay hoy y qué falta.
 *   **Pruebas de Integración:** ¿Qué APIs o bases de datos interactúan?
 *   **Pruebas E2E (UI):** ¿Qué flujos críticos debe recorrer el usuario?
 *   **Pruebas No Funcionales:** ¿Seguridad, Performance, Accesibilidad?
@@ -108,6 +108,6 @@ El contenido debe seguir esta estructura:
 - **No inventes entornos.** Si el plan necesita uno que `environments.md` no lista, va a "Preguntas abiertas" como bloqueante.
 - Las tres últimas secciones nunca se omiten. Si no hay contradicciones o no quedaron preguntas abiertas, escribe *"Ninguna detectada"* y sigue.
 
-Una vez aprobado el plan y desplegado el entorno, sugerir iniciar la ejecución con `.prompts/6-Testing Exploratorio/smoke-test.md`
+Una vez aprobado el plan, y con el entorno disponible —desplegado ahora o funcionando desde antes—, sugerir iniciar la ejecución con `.prompts/6-Testing Exploratorio/smoke-test.md`
 
 ### **FIN DEL PROMPT**

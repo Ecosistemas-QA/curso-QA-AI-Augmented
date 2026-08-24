@@ -16,6 +16,7 @@ Este repositorio es la base de un curso diseñado para transformar a **QA Manual
 │   ├── infrastructure/     # F3 - Infraestructura
 │   ├── PBI/                # F4 - Especificaciones
 │   └── testing/            # F5-F7 - Testing
+├── .claude/skills/         # Skills: procedimientos que el asistente carga solo
 ├── .guides/                # Manuales técnicos (Git, LLMs, Setup)
 ├── .documents/             # Base de conocimiento teórica (READMEs humanos)
 ├── .gitignore              # Qué queda fuera del repositorio
@@ -82,8 +83,8 @@ El curso sigue un flujo lineal y lógico donde cada paso alimenta al siguiente:
 1.  **F1 - Constitución:** Define el negocio (`business-model.md`) y el mercado (`market-context.md`).
 2.  **F2 - Arquitectura:** Genera el `prd-generator.md` y el `architecture-design.md` (incluye diseño de APIs y Diagramas Mermaid).
 3.  **F3 - Infraestructura:** Mapea el entorno técnico. Matriz de componentes (Frontend, API, DB) y estrategia de datos.
-4.  **F4 - Especificaciones:** Gestión de Backlog en Jira (Jira-First) y refinamiento BDD/Gherkin.
-5.  **F5 - Shift-Left Testing:** Inspección estática de requisitos y corrección proactiva en la fuente. Análisis de Riesgos.
+4.  **F4 - Especificaciones:** Gestión de Backlog en Jira (Jira-First) y refinamiento BDD/Gherkin. En Brownfield suma la reconstrucción de lo ya construido: la skill `documentar-historia` explora la aplicación y escribe la historia que nunca existió, con su evidencia.
+5.  **F5 - Shift-Left Testing:** Inspección estática de requisitos y corrección proactiva en la fuente. Análisis de Riesgos. Cuando el software ya existe, la historia se contrasta también contra el comportamiento observado.
 6.  **F6 - Testing Exploratorio:** Ejecución de la **"Trifuerza"** (UI, API, DB) asistida por MCPs (Playwright, Postman, SQL).
 7.  **F7 - Documentación CPs:** Formalización de casos de prueba, cálculo de ROI de automatización y soporte para Xray.
 

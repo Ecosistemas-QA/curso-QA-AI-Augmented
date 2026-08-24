@@ -47,6 +47,15 @@ Asegúrate de cubrir:
 > aceptación inventado que nadie revisó se prueba igual que uno acordado, y ahí es donde el
 > equipo descubre tarde que probó lo que no era.
 
+> **Si la historia ya trae valores marcados como `Observado`, respétalos y no los reescribas.**
+> Salieron de mirar la aplicación y tienen evidencia detrás. Pero **observado no es acordado**:
+> si ningún documento los respalda, la pregunta abierta sigue viva aunque el dato sea cierto.
+> Que el sistema se comporte de una manera no significa que deba comportarse así.
+>
+> **Y el campo `Implementación` no lo tocas.** Lo escribe quien haya ido a verificar el
+> comportamiento real; si llega como `Sin verificar`, se queda `Sin verificar`. Refinar la
+> redacción de una historia no comprueba que la funcionalidad exista.
+
 ### **Fase 3: Sincronización con Jira**
 
 *   **Si tienes el MCP de Atlassian:** actualiza la descripción en Jira con la versión refinada y los escenarios Gherkin.
@@ -69,6 +78,7 @@ El contenido debe seguir esta estructura:
 # Story: [Título Refinado]
 **ID:** [KEY de Jira o ID temporal]
 **Epic:** [EPIC-KEY]
+**Implementación:** [Implementada | Parcial | No encontrada | Sin verificar]
 **Estado de sincronización:** [Sincronizado con Jira | PENDIENTE DE SUBIR A JIRA]
 **Estado:** Refinado
 
@@ -104,6 +114,7 @@ El contenido debe seguir esta estructura:
 | Dato / afirmación | De dónde sale |
 | :--- | :--- |
 | [Valor, límite o mensaje] | `prd.md` · [sección] |
+| [Valor, límite o mensaje] | **Observado** — [entorno], [fecha]. Evidencia: `[ruta]` |
 | [Valor, límite o mensaje] | **Hipótesis** — no hay documento que lo respalde |
 
 ## Contradicciones detectadas
@@ -116,6 +127,8 @@ El contenido debe seguir esta estructura:
 **Restricciones:**
 
 - **Todo valor concreto que fijes tú y no salga de un documento se marca como hipótesis** en la tabla de Fuentes, y genera una pregunta abierta.
+- **`Observado` solo lo escribe quien miró la aplicación**, y siempre con entorno, fecha y evidencia. Tú refinas texto: no lo uses para un valor que dedujiste.
+- **El campo `Implementación` se conserva tal como venía.** No lo estimes.
 - **Nunca escribas una credencial en claro**, ni siquiera de un usuario de prueba.
 - Las tres últimas secciones nunca se omiten. Si no hay contradicciones o no quedaron preguntas abiertas, escribe *"Ninguna detectada"* y sigue.
 
