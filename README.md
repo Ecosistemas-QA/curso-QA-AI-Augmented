@@ -145,15 +145,27 @@ Abre el archivo `.prompts/1-Constitucion/business-model.md`, copia el contenido 
 
 ## 🎓 Programa del Curso (Las 7 Fases)
 
-El flujo de trabajo sigue un ciclo de vida de desarrollo de software moderno:
+El flujo sigue un ciclo de vida de desarrollo moderno. **Cada fase lee lo que dejó la
+anterior y escribe su entregable en `.context/`**, así que la carpeta se va llenando sola a
+medida que avanzás:
 
-1.  **Constitución:** Definición de Modelo de Negocio y Mercado.
-2.  **Arquitectura:** Generación de PRD y Diseño Técnico.
-3.  **Infraestructura:** Estrategia de Entornos y Datos de Prueba.
-4.  **Especificaciones:** Creación de Backlog y User Stories (BDD).
-5.  **Shift-Left Testing:** Inspección de requisitos y Análisis de Riesgos.
-6.  **Testing Exploratorio:** Ejecución de pruebas en UI, API y DB ("La Trifuerza").
-7.  **Documentación:** Generación de Casos de Prueba y Reportes de Cierre.
+| # | Fase | Qué produce | Dónde queda |
+| :--- | :--- | :--- | :--- |
+| **1** | Constitución | Canvas de negocio y análisis de mercado | `.context/idea/` |
+| **2** | Arquitectura | PRD y diseño del sistema (con diagramas Mermaid) | `.context/architecture/` |
+| **3** | Infraestructura | Mapa de entornos y estrategia de datos de prueba | `.context/infrastructure/` |
+| **4** | Especificaciones | Backlog: epics e historias refinadas en Gherkin | `.context/PBI/` |
+| **5** | Shift-Left Testing | Inspección de requisitos y matriz de riesgos | `.context/testing/` |
+| **6** | Testing Exploratorio | Smoke, sesiones de UI, API y DB, y reportes de bugs | `.context/testing/exploratory/` |
+| **7** | Documentación de CPs | Análisis de escenarios, ROI de automatización y casos formales | `.context/testing/documentation/` |
+
+Los prompts de cada fase están en `.prompts/`, numerados igual. **No hace falta acordarse
+del orden: al terminar, cada prompt te dice cuál sigue**, y el siguiente se detiene si le
+falta lo anterior.
+
+> Las Fases 4 a 7 se apoyan en Jira y en MCPs (Playwright, base de datos), pero **ninguna se
+> bloquea si no los tenés**: escriben igual en local y te avisan qué quedó pendiente de
+> sincronizar.
 
 ---
 
