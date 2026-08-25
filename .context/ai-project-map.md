@@ -16,7 +16,8 @@ Este repositorio es la base de un curso diseñado para transformar a **QA Manual
 │   ├── infrastructure/     # F3 - Infraestructura
 │   ├── PBI/                # F4 - Especificaciones
 │   └── testing/            # F5-F7 - Testing
-├── .claude/skills/         # Skills: procedimientos que el asistente carga solo
+├── .agents/skills/         # Skills: procedimientos que el asistente carga solo
+├── .claude/skills/         # Skills propias de Claude Code y enlaces a .agents/skills/
 ├── .guides/                # Manuales técnicos (Git, LLMs, Setup)
 ├── .documents/             # Base de conocimiento teórica (READMEs humanos)
 ├── .gitignore              # Qué queda fuera del repositorio
