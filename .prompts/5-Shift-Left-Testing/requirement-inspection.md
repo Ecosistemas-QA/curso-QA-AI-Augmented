@@ -90,7 +90,7 @@ El objetivo final no es solo reportar, sino mejorar.
 
 *   **Si tienes el MCP de Atlassian:**
     1.  Actualiza la User Story en Jira con las correcciones detectadas.
-    2.  Deja un comentario en la incidencia indicando que la edición corresponde al análisis de **Shift-Left Testing**.
+    2.  Deja un comentario en la actividad indicando que la edición corresponde al análisis de **Shift-Left Testing**.
     3.  En ese comentario, lista los defectos encontrados (ID/tipo + resumen) y qué se corrigió.
 *   **Si no lo tienes, o el MCP no responde:** no te detengas. Escribe igual la **"Versión Corregida de la Historia"** dentro del reporte, deja el campo `**Estado de sincronización:** PENDIENTE DE SUBIR A JIRA` y **avísame en la confirmación final**.
 
