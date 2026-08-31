@@ -23,6 +23,12 @@ Lenguaje estructurado para definir criterios de aceptación:
 ### 3. Jira-First Workflow
 La fuente de la verdad es Jira. La carpeta local `.context/PBI/` es un espejo para que la IA pueda analizar el backlog.
 
+**Y el espejo va en las dos direcciones.** Casi todos los prompts escriben de local hacia Jira, pero en un equipo no eres el único que crea tickets: cuando la historia que necesitas nació en el tablero, o alguien la editó ahí, la trae `pbi-sync-from-jira.md`.
+
+> **El archivo local no es un caché descartable: es el modo normal de trabajo.** Leerlo cuesta menos que consultar el tablero en cada paso, y viaja por Git, así que trae también lo que escribieron los demás. Por eso el prompt de sincronización **empieza comprobando el repositorio**: la causa más común de que una historia falte en local no es Jira, es un `pull` pendiente. Y por eso **nunca baja en masa**: solo la historia que vas a trabajar.
+
+> ⚠️ **Y la regla que hace que esto sea trabajo de QA y no de plomería:** cuando el texto de un criterio difiere entre el tablero y el archivo, **eso no es un problema de sincronización — es que dos personas creen cosas distintas sobre el producto.** Se reportan las dos versiones y no se elige.
+
 **Pero Jira no bloquea la fase.** Si todavía no hay proyecto en Jira, o el MCP no responde, los prompts escriben igual el backlog local con IDs temporales (`PBI-01`) y marcan cada archivo con `Estado de sincronización: PENDIENTE DE SUBIR A JIRA`. El índice `epic-tree.md` lleva la lista de lo que queda por subir. Se trabaja igual, y no se pierde el rastro de lo que falta sincronizar.
 
 ### 4. Reconstruir no es planificar
@@ -47,7 +53,7 @@ Por eso `pbi-product-backlog.md` pregunta el alcance antes de empezar, y `epic-t
 > El alcance **no depende del tipo de proyecto**. Un proyecto nuevo con un PRD grande también conviene desglosarlo por etapas.
 
 ## 🛠️ Herramientas Utilizadas
-*   **Prompts de IA:** `pbi-product-backlog.md`, `refine-stories.md`, `pbi-add-feature.md`.
+*   **Prompts de IA:** `pbi-product-backlog.md`, `refine-stories.md`, `pbi-add-feature.md`, `pbi-sync-from-jira.md`.
 *   **Skill `documentar-historia`:** explora la aplicación con el navegador y escribe la historia de una funcionalidad que ya está construida y no está documentada en ningún lado. Trae el formato del entregable en `plantilla-historia.md` y un verificador que comprueba que cada afirmación observada tenga su captura.
 *   **Jira / Atlassian MCP:** Para gestión de tickets nativos.
 
