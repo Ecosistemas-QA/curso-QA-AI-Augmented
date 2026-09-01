@@ -16,7 +16,20 @@ Decisión económica sobre qué automatizar.
 *   *Alto ROI:* Pruebas repetitivas, estables y críticas -> **Automatizar**.
 *   *Bajo ROI:* Pruebas visuales, cambiantes o de una sola vez -> **Manual**.
 
-### 3. Trazabilidad
+### 3. Antes de documentar: ¿esto existe?
+
+Un caso de prueba describe cómo verificar algo. **Si ese algo no está construido, el caso no
+es documentación: es una lista de deseos con formato de caso de prueba.**
+
+Por eso `test-analysis.md` mira el campo `Implementación:` de la historia antes de empezar. Una
+historia `No encontrada` frena la fase; una `Sin verificar` sigue, pero queda dicho en el
+reporte — porque los casos se estarán diseñando contra una especificación que nadie contrastó
+con el sistema.
+
+> Es el mismo criterio de la Fase 6, aplicado un paso más adelante: **no se mide contra algo
+> que nadie fue a mirar.**
+
+### 4. Trazabilidad
 La capacidad de seguir el rastro:
 `User Story` <-> `Test Case` <-> `Bug` <-> `Código`.
 Esto asegura que si cambian los requisitos, sabemos qué pruebas actualizar.
