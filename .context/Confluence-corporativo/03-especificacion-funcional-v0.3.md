@@ -27,7 +27,6 @@ básico para un negocio.
 - Configuración de disponibilidad y duración de turno
 - Bloqueo de horarios y días
 - Portal de auto-reserva para el cliente final
-- Cancelación por ambas partes
 - Notificaciones por correo electrónico
 - Listado de clientes y lógica del plan gratuito
 
@@ -57,7 +56,6 @@ que requieren configuración).
 - Configurar su disponibilidad recurrente y la duración de sus turnos
 - Bloquear horarios o días completos
 - Ver su agenda de turnos próximos
-- Cancelar un turno
 - Ver el listado de sus clientes
 - Cargar un cliente manualmente
 
@@ -72,7 +70,6 @@ a la fricción).
 **Puede:**
 - Ver la disponibilidad de un profesional
 - Reservar un turno
-- Cancelar su turno mediante el enlace del correo de confirmación
 
 > ⚠️ **Decisión de producto, no negociable:** el cliente final **no se registra**. Exigir una
 > cuenta para sacar un turno hace que una parte relevante abandone el proceso.
@@ -191,53 +188,23 @@ que no tenga que escribirlos de nuevo.
 
 **RN-03 — Solo hacia adelante.** No se pueden reservar horarios pasados.
 
-**RN-04 — Límite del plan gratuito.** Ver sección 8.
+**RN-04 — Límite del plan gratuito.** Ver sección 7.
 
 `TBD` — **Anticipación máxima.** ¿Hay un tope para reservar a futuro? Hoy el calendario
 permite avanzar indefinidamente.
 
 ---
 
-## 6. Cancelación
-
-### 6.1 Por parte del cliente
-
-Mediante el **enlace incluido en el correo de confirmación**. No requiere cuenta ni
-contraseña: el enlace lleva un identificador único del turno.
-
-### 6.2 Por parte del profesional
-
-Desde su panel, sobre cualquier turno de su agenda.
-
-### 6.3 Reglas comunes
-
-**La única restricción es que el turno no puede estar en el pasado.** No hay ventana mínima:
-se puede cancelar hasta el momento del turno.
-
-Al cancelar:
-1. El turno pasa a estado *cancelado*
-2. El horario vuelve a estar disponible
-3. Se notifica **a la parte que no canceló**
-
-`TBD` — ¿Debe el profesional indicar un motivo al cancelar? ¿Se le muestra al cliente?
-
-> 📌 **Nota de discusión.** En la reunión de arranque se planteó exigir una anticipación
-> mínima para cancelar —por ejemplo, dos horas—. No se definió y queda así por ahora, pero
-> es probable que vuelva: es el problema principal del perfil de Carlos.
-
----
-
-## 7. Notificaciones por correo
+## 6. Notificaciones por correo
 
 | Evento | Destinatario | Contenido |
 | :--- | :--- | :--- |
 | Registro | Profesional | Bienvenida |
-| Turno reservado | Cliente | Detalle del turno **y enlace de cancelación** |
+| Turno reservado | Cliente | Detalle del turno |
 | Turno reservado | Profesional | Aviso de reserva nueva |
-| Turno cancelado | La parte que no canceló | Aviso con quién canceló |
 | **Recordatorio** | Cliente | **El día anterior al turno** |
 | Recuperación de contraseña | Profesional | Enlace con token |
-| Límite alcanzado | Profesional | Ver sección 8 |
+| Límite alcanzado | Profesional | Ver sección 7 |
 
 **El recordatorio del día anterior es un requisito, no un extra.** Los no-shows son la mitad
 del problema que el producto viene a resolver, y es el único mecanismo previsto para
@@ -250,9 +217,9 @@ reducirlos.
 
 ---
 
-## 8. Plan gratuito y límite
+## 7. Plan gratuito y límite
 
-### 8.1 La regla
+### 7.1 La regla
 
 Un profesional en plan gratuito puede tener hasta **10 clientes únicos**.
 
@@ -264,7 +231,7 @@ Un profesional en plan gratuito puede tener hasta **10 clientes únicos**.
   seguir reservando sin restricción alguna.
 - Se aplica también a la **carga manual** desde el panel.
 
-### 8.2 Qué pasa al llegar al límite
+### 7.2 Qué pasa al llegar al límite
 
 **Al cliente número 11 que intenta reservar** se le muestra:
 
@@ -289,7 +256,7 @@ se guarda.
 > 📌 El aviso del panel existe porque **no se puede depender de que el correo se lea**. Es
 > el segundo punto de contacto.
 
-### 8.3 Plan pago
+### 7.3 Plan pago
 
 No existe todavía. El botón solo registra el interés.
 
@@ -297,12 +264,11 @@ No existe todavía. El botón solo registra el interés.
 
 ---
 
-## 9. Estados del turno
+## 8. Estados del turno
 
 | Estado | Cuándo |
 | :--- | :--- |
 | **Confirmado** | Al crearse. **No hay aprobación previa del profesional** |
-| **Cancelado** | Cuando cualquiera de las partes cancela |
 
 **El turno nace confirmado.** Se evaluó un paso intermedio de aprobación y se descartó:
 agrega una espera que es justamente lo que el producto viene a eliminar.
@@ -313,7 +279,7 @@ cálculo de disponibilidad. **Sin resolver.**
 
 ---
 
-## 10. Requisitos no funcionales
+## 9. Requisitos no funcionales
 
 `TBD` — **Sección pendiente.** Hay que definir al menos tiempos de respuesta esperados,
 usuarios concurrentes soportados, navegadores y objetivo de disponibilidad. Queda para la
@@ -324,7 +290,7 @@ registrarse y tener su enlace de reservas funcionando en menos de 5 minutos.**
 
 ---
 
-## 11. Ambientes y datos de prueba
+## 10. Ambientes y datos de prueba
 
 | Ambiente | Para qué |
 | :--- | :--- |
@@ -338,20 +304,20 @@ Los profesionales y clientes cargados ahí son ficticios y no corresponden a per
 
 ---
 
-## 12. Preguntas abiertas
+## 11. Preguntas abiertas
 
 Se listan juntas para la revisión con desarrollo:
 
 1. Bloqueo de un período que ya tiene turnos reservados (4.3)
 2. Anticipación máxima para reservar (5.2)
-3. Ventana mínima de cancelación (6.3)
-4. Motivo de cancelación del profesional (6.3)
-5. Horario de envío del recordatorio (7)
-6. Estado *No se presentó* (9)
-7. Requisitos no funcionales completos (10)
-8. Refresco de datos de UAT (11)
-9. Bloqueo por intentos fallidos de login (3.3)
-10. Restricción de la duración del turno a múltiplos (4.2)
+3. Horario de envío del recordatorio (6)
+4. Estado *No se presentó* (8)
+5. Requisitos no funcionales completos (9)
+6. Refresco de datos de UAT (10)
+7. Bloqueo por intentos fallidos de login (3.3)
+8. Restricción de la duración del turno a múltiplos (4.2)
+9. Qué hace el profesional con un turno al que el cliente no va a asistir. No hay
+   mecanismo previsto y aparece en soporte
 
 ---
 

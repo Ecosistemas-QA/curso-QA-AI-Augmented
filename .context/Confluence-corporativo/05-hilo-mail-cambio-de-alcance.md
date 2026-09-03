@@ -56,7 +56,7 @@ Vercel no existe. Las opciones son:
 Cualquiera de las dos primeras son dos o tres días de trabajo más la plata. Con el
 lanzamiento encima, **prefiero salir sin recordatorios y agregarlos después.**
 
-Todo lo demás de mails funciona: confirmación, aviso al profesional y aviso de cancelación.
+Todo lo demás de mails funciona: confirmación y aviso al profesional.
 
 **Soft launch.** De acuerdo con arrancar con conocidos.
 

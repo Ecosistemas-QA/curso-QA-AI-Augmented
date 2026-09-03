@@ -36,28 +36,13 @@ Es lo único que me falta para dejar de usar el cuaderno del todo."
 
 ---
 
-## Cancelaciones
-
-**#19 — 15/03/2026 — cliente final**
-"Intenté cancelar mi turno con el link que me llegó por mail y me dice que no se encuentra
-la página. Probé dos veces. Al final le escribí por WhatsApp a la profesional como antes."
-
-**#24 — 19/03/2026 — profesional**
-"Mis clientes me dicen que el botón de cancelar del mail no les funciona. Les tira error.
-Me terminan escribiendo a mí igual, que era justamente lo que quería evitar."
-
-**#26 — 21/03/2026 — cliente final**
-"El enlace para cancelar da error 404."
-
-> *Nota de Sol: los tres son de la misma semana. Se lo pasé a Diego, dijo que era un tema de
-> permisos de la base y que ya lo estaba viendo. Después de fin de marzo no volvió a
-> aparecer.*
+## Ausencias
 
 **#55 — 22/04/2026 — profesional**
-"Una clienta canceló ayer y yo no me enteré hasta que no vino. ¿No me tendría que llegar un
-mail cuando cancelan?"
+"Una clienta no vino ayer y yo la estuve esperando media hora. ¿No hay forma de que me
+avise por el sistema, o de que yo lo deje anotado?"
 
-> *Nota de Sol: le pedí que revise spam. Ahí estaba.*
+> *Nota de Sol: no hay. Le dije que lo anote aparte.*
 
 **#71 — 08/05/2026 — profesional**
 "¿Hay alguna forma de marcar que alguien no vino? Necesito llevar la cuenta de quién me
@@ -90,7 +75,7 @@ apareciera disponible."
 
 **#52 — 20/04/2026 — profesional**
 "Me voy de vacaciones dos semanas. Bloqueé los días en el sistema pero los turnos que ya
-tenía dados siguen ahí. ¿Los tengo que cancelar uno por uno? Son catorce."
+tenía dados siguen ahí. ¿Qué hago con esos catorce?"
 
 **#58 — 26/04/2026 — cliente final**
 "Tenía turno el 5 y la profesional me avisó por WhatsApp que estaba de vacaciones. En la

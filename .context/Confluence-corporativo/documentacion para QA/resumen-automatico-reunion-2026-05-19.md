@@ -24,8 +24,8 @@ y validarlo.
 
 **Consultas a soporte.** Se revisó el resumen preparado por Sol sobre el período de marzo a
 mayo. Los temas más frecuentes fueron el recordatorio previo al turno, la dificultad de los
-profesionales para localizar su dirección pública, un incidente de una semana con el enlace
-de cancelación, y dos casos de turnos superpuestos.
+profesionales para localizar su dirección pública, los bloqueos que no afectan a los turnos
+ya reservados, y dos casos de turnos superpuestos.
 
 **Turnos superpuestos.** Diego explicó que ambos casos responden a un problema de zonas
 horarias, ya resuelto a principios de abril.

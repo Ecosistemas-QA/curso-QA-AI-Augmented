@@ -80,8 +80,9 @@ tiene que registrar. Mariana fue tajante: **no.**
 > *"Si para sacar un turno tenés que crearte una cuenta, la mitad abandona. El cliente
 > pone nombre y mail, y listo."*
 
-Fernando preguntó cómo hace entonces para cancelar si no tiene cuenta. **Se resolvió así:
-el mail de confirmación lleva un link de cancelación.** Sin cuenta, sin contraseña.
+Fernando preguntó entonces cómo hace el cliente para volver a encontrar su turno más
+adelante. **Quedó sin resolver:** por ahora lo único que tiene es el correo de
+confirmación.
 
 ---
 
@@ -239,9 +240,8 @@ Diego va a arrancar con lo que conoce para tener algo mostrable rápido. Nada de
 
 Sobre los mails, quedó definido que se manda:
 
-- Confirmación al cliente cuando reserva (con el link de cancelación).
+- Confirmación al cliente cuando reserva.
 - Aviso al profesional cuando le reservan.
-- Aviso cuando se cancela, a la parte que no canceló.
 - **Y un recordatorio el día anterior al turno.** Fernando insistió muchísimo con este:
   *"es el que arregla los no-shows, que es la mitad del problema que vinimos a resolver"*.
   Diego dijo que era fácil. Nadie lo discutió.
@@ -253,7 +253,7 @@ Sobre los mails, quedó definido que se manda:
 Lo junto todo acá porque se nos fue el tiempo:
 
 - Varios profesionales por cuenta (¿versión 2?)
-- Si hay una ventana mínima para cancelar, tipo "hasta 2 horas antes"
+- Si el profesional puede marcar que un cliente no se presentó
 - Qué pasa si el profesional bloquea un día que ya tenía turnos dados
 - Con cuánta anticipación se puede reservar. ¿Hay un tope?
 - Cuánto va a costar el plan pago, cuando exista

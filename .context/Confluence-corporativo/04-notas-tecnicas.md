@@ -35,7 +35,7 @@ hay un trigger que crea el registro cuando alguien se registra.
 `day_of_week` es un entero, **0 = domingo, 6 = sabado**. anotarlo porque me equivoque dos
 veces.
 
-`status` es un string con un check constraint. valores: `confirmed` | `cancelled`. no hay
+`status` es un string con un check constraint. hoy el unico valor es `confirmed`. no hay
 enum de postgres, es un check. **esto ya me rompio una vez en produccion**, ver abajo.
 
 `clients.email` esta como unique global. o sea que si la misma persona reserva con dos
@@ -100,23 +100,20 @@ POST   /api/availability/rules
 GET    /api/availability/blocks
 POST   /api/availability/blocks
 DELETE /api/availability/blocks
-POST   /api/appointments/[id]/cancel
 ```
 
 **los publicos** (sin sesion, para el flujo del cliente final):
 ```
 GET    /api/public/availability
 POST   /api/public/appointments
-POST   /api/public/appointments/[id]/cancel
 ```
 
 el namespace `/api/public/*` es a proposito: son los unicos que no piden auth y quiero
 tenerlos separados para no confundirme.
 
-**ojo con la cancelacion publica**: el cliente no tiene sesion, entonces RLS le bloquea el
-update. tuve que usar el client de admin (service role) para saltear RLS en ese endpoint
-puntual. funciona pero es el lugar mas delicado del codigo, si alguien adivina un id de
-turno puede cancelarlo.
+**ojo con los endpoints publicos**: el cliente no tiene sesion, asi que ahi RLS es lo unico
+que separa los datos de un profesional de los de otro. es el lugar mas delicado del codigo
+y el que menos mire.
 
 ## la reserva
 
@@ -155,9 +152,8 @@ el mensaje de error tiene code `LIMIT_REACHED` y devuelve 403.
 
 lo que sale hoy:
 - bienvenida al registrarse
-- confirmacion al cliente cuando reserva, con el link de cancelacion
+- confirmacion al cliente cuando reserva
 - aviso al profesional cuando le reservan
-- aviso de cancelacion a la parte que no cancelo
 
 **el recordatorio del dia anterior NO esta hecho.** necesita un cron y vercel en el plan que
 tenemos no da cron. hay que buscarle la vuelta o pagar. lo dejo pendiente y lo aviso porque

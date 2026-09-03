@@ -51,8 +51,8 @@ registran son lo mismo.
 
 para el mail **usa mailinator o algo parecido**, una casilla descartable que puedas leer sin
 tener una casilla de verdad. lo vas a necesitar, porque el sistema te manda correos y vas a
-querer leerlos: la confirmacion de la reserva lleva adentro el link con el que el cliente
-cancela, y sin abrir el mail no hay forma de llegar a esa pantalla.
+querer leerlos: la confirmacion de la reserva es lo unico que le queda al cliente como
+comprobante, y sin abrir el mail no hay forma de saber que llego bien.
 
 dos cosas mas sobre los correos:
 

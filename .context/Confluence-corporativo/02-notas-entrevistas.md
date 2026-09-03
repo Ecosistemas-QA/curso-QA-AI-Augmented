@@ -136,8 +136,8 @@ de todas y la que quedó como perfil de referencia del lado del cliente.
 
 **Lo que pidió sin que le preguntara:**
 
-- **Poder cancelar sola**, sin tener que dar explicaciones por chat. Dijo que a veces va a
-  una cita a la que no quiere ir solo por no tener que escribir el mensaje.
+- **Que le quede el turno anotado en algún lado**, sin tener que buscar el chat para
+  acordarse de la hora.
 - **Un recordatorio automático** que se le meta en el calendario del celular.
 - **Ver la disponibilidad completa**, no que le ofrezcan dos horarios.
 
@@ -207,7 +207,7 @@ Lo que me llevo como definido después de las entrevistas:
 
 - El profesional configura **una franja horaria recurrente por día de la semana** y una
   **duración estándar** de turno. Nada más. Cualquier cosa más compleja los pierde.
-- El cliente **no se registra**. Nombre y mail, y el link de cancelación en el mail.
+- El cliente **no se registra**. Nombre y mail, nada más.
 - **Los recordatorios no son un extra: son la mitad del valor** para el perfil de Carlos.
 - El profesional tiene que poder **bloquear días u horarios** (vacaciones, un turno médico
   propio). Salió en cuatro de las siete entrevistas.

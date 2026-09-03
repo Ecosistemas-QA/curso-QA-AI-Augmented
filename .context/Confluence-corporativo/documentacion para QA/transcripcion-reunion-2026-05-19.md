@@ -53,7 +53,7 @@
 
 [00:02:20] **Sol:** Ya está arriba de todo.
 
-[00:02:24] **Sol:** Tercero, cancelaciones. Hubo una semana en marzo donde tres clientes distintos no pudieron cancelar. Le daban al link del mail y les tiraba un error.
+[00:02:24] **Sol:** Tercero, turnos superpuestos. Hubo dos casos en marzo, dos clientes anotados en el mismo horario del mismo dia.
 
 [00:02:38] **Diego:** Eso lo arreglé.
 
@@ -91,7 +91,7 @@
 
 [00:04:17] **Fernando M.:** ¿Y qué salió?
 
-[00:04:19] **Sol:** Te resumo. Recordatorio, la gente no encuentra su link, cancelaciones que fallaron una semana, y dos turnos duplicados.
+[00:04:19] **Sol:** Te resumo. Recordatorio, la gente no encuentra su link, dos turnos superpuestos, y lo de los bloqueos.
 
 [00:04:29] **Fernando M.:** Pará. ¿El recordatorio otra vez?
 
@@ -185,11 +185,11 @@
 
 [00:09:37] **Diego:** Digo, el profesional entra y ve los turnos que tiene. Y los cancela. Eso, ¿dónde va?
 
-[00:09:45] **Sol:** Eso es la agenda, ¿no?
+[00:09:45] **Sol:** ¿Eso no estaba ya?
 
-[00:09:48] **Diego:** ...sí. Ponele. No sé, para mí es otra cosa, pero...
+[00:09:48] **Diego:** ...no. O sea, no lo hablamos nunca. Yo lo pregunto porque no sé qué va ahí.
 
-[00:09:54] **Mariana P.:** Ponelo en la agenda por ahora, después se ordena. Sol, ¿lo estás anotando?
+[00:09:54] **Mariana P.:** Dejalo para la sesión que viene, que esto se nos va a hacer largo. Sol, ¿lo estás anotando?
 
 [00:09:59] **Sol:** Sí.
 
@@ -209,17 +209,17 @@
 
 [00:10:42] **Diego:** Su turno, confirmado.
 
-[00:10:44] **Sol:** Ah, y hubo uno de esos. Una profesional bloqueó y le seguían apareciendo confirmados. Nos preguntó si tenía que avisarles ella.
+[00:10:44] **Sol:** Es lo que decía recién. Una profesional bloqueó y le seguían apareciendo confirmados. Nos preguntó si tenía que avisarles ella.
 
 [00:10:55] **Mariana P.:** ¿Y qué le dijiste?
 
 [00:10:57] **Sol:** Que sí. Porque no sabía qué otra cosa decirle.
 
-[00:11:01] **Mariana P.:** Bueno, eso está sin decidir. Dos: hasta cuándo se puede cancelar. Hoy se cancela hasta el minuto antes.
+[00:11:01] **Mariana P.:** Bueno, eso está sin decidir. Dos: qué pasa cuando alguien no se presenta. Hoy el profesional no tiene dónde anotarlo.
 
 [00:11:12] **Fernando M.:** Eso a los entrenadores los mata.
 
-[00:11:14] **Mariana P.:** Ya sé. Pero nunca definimos un mínimo. ¿Dos horas? ¿Veinticuatro? ¿Lo elige cada uno? Sin decidir.
+[00:11:14] **Mariana P.:** Ya sé. Pero nunca definimos nada. ¿Un estado del turno? ¿Una nota privada? ¿Lo ve el cliente? Sin decidir.
 
 [00:11:26] **Mariana P.:** Tres: varios profesionales en una misma cuenta. Salió en las entrevistas, salió en soporte. Una peluquería con tres personas comparte una sola cuenta y se anotan a mano quién atiende a quién.
 
