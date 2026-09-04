@@ -16,6 +16,8 @@ fase de especificaciones, y por eso no se toca.
 **ID:** [KEY de la herramienta de gestión, o ID temporal PBI-01]
 **Epic:** [EPIC-KEY]
 **Implementación:** [Implementada | Parcial | No encontrada | Sin verificar]
+**Refinamiento:** [Borrador | Refinado]
+**Inspección QA:** [Sin inspeccionar | Aprobado | Requiere cambios | Bloqueante]
 **Modo de exploración:** [Navegador automatizado | Guiada por la persona | Sin explorar]
 **Entorno observado:** [nombre del entorno] · [fecha]
 **Estado de sincronización:** [Sincronizado | PENDIENTE DE SUBIR]
@@ -49,6 +51,10 @@ Como [rol], quiero [acción], para [beneficio].
 ---
 
 ## Las reglas de los cuatro campos que se llenan mal
+
+> ⚠️ **Los cuatro estados son independientes.** Vos escribís `Implementación` —y solo ese—
+> porque sos el único que fue a mirar. **`Refinamiento` e `Inspección QA` se conservan tal
+> como vengan**: refinar y revisar son otros dos trabajos, con otros dos dueños.
 
 **`Implementación`** — es un veredicto sobre lo que **viste**, no sobre lo que suponés:
 

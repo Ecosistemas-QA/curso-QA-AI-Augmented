@@ -38,6 +38,23 @@ En un proyecto **Brownfield** el software llegó antes que el papel: la funciona
 *   **Un tercer tipo de fuente.** Además de *documentado* e *hipótesis*, existe **`Observado`**: un dato verificado en la aplicación, con entorno, fecha y evidencia.
 *   **Un estado de implementación** por historia — `Implementada`, `Parcial`, `No encontrada` o `Sin verificar` —, porque que una historia esté escrita no significa que esté construida.
 
+### 6. Cuatro estados, cuatro dueños
+
+**Los cuatro estados de una historia son independientes y cada uno tiene un solo dueño.**
+No se deducen entre sí y **ninguno se estima**: si no te consta, se deja como está.
+
+| Campo | Contesta | Lo escribe |
+| :--- | :--- | :--- |
+| `Implementación` | ¿Está **construido**? | La skill `documentar-historia`, que va a mirar |
+| `Refinamiento` | ¿Tiene **criterios probables**? | `refine-stories.md` |
+| `Inspección QA` | ¿Pasó la **revisión**? | `requirement-inspection.md` (Fase 5) |
+| `Estado de sincronización` | ¿Está en **Jira**? | Cualquiera que suba o coteje |
+
+> **Una historia refinada no está construida, y una construida no está inspeccionada.**
+> Mezclarlos es el error que hace que alguien lea `Refinado` y crea que la funcionalidad
+> existe.
+
+
 > **Ninguno de los dos es un campo de la herramienta de gestión, y no hace falta crearlos:** viven en el `story.md`. El tablero lleva el estado del trabajo; el archivo lleva de dónde salió cada afirmación. Lo único que se refleja en el ticket es la etiqueta `sin-verificar`, que funciona en cualquier plan y no necesita permisos de administrador.
 
 > ⚠️ **Y la regla que sostiene todo esto: observado no es acordado.** Que el sistema haga algo no significa que deba hacerlo. Un defecto documentado como criterio de aceptación deja de ser un defecto para siempre, porque el papel pasa a decir que funciona así.
