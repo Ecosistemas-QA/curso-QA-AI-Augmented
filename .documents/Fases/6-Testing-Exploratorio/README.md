@@ -5,7 +5,7 @@ Ejecutar pruebas dinámicas manuales o asistidas para validar la funcionalidad y
 
 > ⚠️ **Con una condición que no siempre se cumple: que haya un sistema que se pueda romper.** Antes de diseñar la sesión hay que mirar `environments.md`. Si el proyecto no tiene un entorno separado de pruebas, **lo que vas a atacar es lo que usan las personas reales**, y la sesión se acota: se prueban validaciones —que rechazan y no dejan rastro— y **no** se carga volumen, ni se disparan avisos que salen de verdad.
 >
-> Los escenarios que queden fuera **se diseñan igual y se marcan `No ejecutado`, con el motivo**. Esa lista es el mejor argumento que vas a tener para pedir un entorno de pruebas. Se continua con la valoracion o calificacion de cada CP propuesto en las US para la etapa de documentacion.
+> Los escenarios que queden fuera **se diseñan igual y se marcan `No ejecutado`, con el motivo**. Esa lista es el mejor argumento que vas a tener para pedir un entorno de pruebas.
 
 ## 🔑 Conceptos Clave
 
