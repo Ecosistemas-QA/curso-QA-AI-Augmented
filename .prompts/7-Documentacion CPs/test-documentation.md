@@ -24,7 +24,7 @@ Primero, lee `.context/testing/documentation/[ID-US]/priorizacion-roi.md` y el `
 
 Xray no se puede detectar solo, así que esto sí te lo tengo que decir yo. Pregúntame:
 1.  Si el proyecto de Jira tiene **Xray disponible y operativo**.
-2.  La `Project Key`.
+2.  La `Project Key` — **solo si no la encuentras**: mírala primero en mi pedido, en `AGENTS.md`, o deduécela del prefijo de las keys que ya haya en `epic-tree.md`.
 3.  Las historias objetivo (keys de Jira) para vincular los tests.
 
 **Si no te contesto, o no hay Jira configurado, no te detengas:** toma la Ruta A y anota el estado de sincronización como pendiente.
